@@ -1,0 +1,387 @@
+﻿# LaTeX → Word debug log
+# version: 2026.08.25.34
+# generated: 2026-08-27T16:35:33.622Z
+{"time":"2026-08-27T16:35:21.395Z","version":"2026.08.25.34","event":"candidate-skipped","kind":"blok \\left[ … \\right]","length":276,"reason":"Kandidát překročil limit nebo obsahuje hranici sekce."}
+{"time":"2026-08-27T16:35:21.396Z","version":"2026.08.25.34","event":"stats","original":"\\left[ c+d \\right]","cleaned":"\\left[ c+d \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.396Z","version":"2026.08.25.34","event":"stats","original":"\\left[ x_i + y_i \\right]","cleaned":"\\left[ x_i + y_i \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.396Z","version":"2026.08.25.34","event":"candidate-skipped","kind":"blok \\left[ … \\right]","length":292,"reason":"Kandidát překročil limit nebo obsahuje hranici sekce."}
+{"time":"2026-08-27T16:35:21.396Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\left| x+y \\right| \\right]","cleaned":"\\left[ \\left| x+y \\right| \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.396Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{1}=\\begin{pmatrix}1\\\\2\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{1}=\\begin{pmatrix}1\\\\2\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.397Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{2}=\\begin{pmatrix}2\\\\3\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{2}=\\begin{pmatrix}2\\\\3\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.397Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{3}=\\begin{pmatrix}3\\\\4\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{3}=\\begin{pmatrix}3\\\\4\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.397Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{4}=\\begin{pmatrix}4\\\\5\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{4}=\\begin{pmatrix}4\\\\5\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.397Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{5}=\\begin{pmatrix}5\\\\6\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{5}=\\begin{pmatrix}5\\\\6\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.398Z","version":"2026.08.25.34","event":"stats","original":"a^2 + b^2 = c^2","cleaned":"a^2 + b^2 = c^2","fixes":[]}
+{"time":"2026-08-27T16:35:21.398Z","version":"2026.08.25.34","event":"stats","original":"\\frac{a}{b} = \\sqrt{c}","cleaned":"\\frac{a}{b} = \\sqrt{c}","fixes":[]}
+{"time":"2026-08-27T16:35:21.398Z","version":"2026.08.25.34","event":"stats","original":"\\boxed{B^m}","cleaned":"\\boxed{B^m}","fixes":[]}
+{"time":"2026-08-27T16:35:21.398Z","version":"2026.08.25.34","event":"stats","original":"\\mathbb{R}^n","cleaned":"\\mathbb{R}^n","fixes":[]}
+{"time":"2026-08-27T16:35:21.398Z","version":"2026.08.25.34","event":"stats","original":"\\mathbf{x} + \\mathbf{y} = \\mathbf{z}","cleaned":"\\mathbf{x} + \\mathbf{y} = \\mathbf{z}","fixes":[]}
+{"time":"2026-08-27T16:35:21.398Z","version":"2026.08.25.34","event":"stats","original":"\\mathrm{det}(A) = 5","cleaned":"\\mathrm{det}(A) = 5","fixes":[]}
+{"time":"2026-08-27T16:35:21.398Z","version":"2026.08.25.34","event":"stats","original":"\\text{Hello World}","cleaned":"\\text{Hello World}","fixes":[]}
+{"time":"2026-08-27T16:35:21.399Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}","cleaned":"\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.399Z","version":"2026.08.25.34","event":"stats","original":"\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix}","cleaned":"\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.399Z","version":"2026.08.25.34","event":"stats","original":"\\begin{Bmatrix} x & y \\\\ z & w \\end{Bmatrix}","cleaned":"\\begin{Bmatrix} x & y \\\\ z & w \\end{Bmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.399Z","version":"2026.08.25.34","event":"stats","original":"\\begin{vmatrix} 1 & 0 \\\\ 0 & 1 \\end{vmatrix}","cleaned":"\\begin{vmatrix} 1 & 0 \\\\ 0 & 1 \\end{vmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.399Z","version":"2026.08.25.34","event":"stats","original":"\\begin{Vmatrix} 2 \\\\ 3 \\end{Vmatrix}","cleaned":"\\begin{Vmatrix} 2 \\\\ 3 \\end{Vmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.400Z","version":"2026.08.25.34","event":"repair-result","original":"\\begin{pmatrix} 1\\2 \\end{pmatrix}","cleaned":"\\begin{pmatrix}1\\\\2 \\end{pmatrix}","fixes":["matrix-row-separator","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.400Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix} 1\\2 \\end{pmatrix}","cleaned":"\\begin{pmatrix}1\\\\2 \\end{pmatrix}","fixes":["matrix-row-separator","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.400Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix} x_1 x_2 x_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} x_1 x_2 x_3 \\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.400Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix} 5-3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} 5-3 \\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.400Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix} a_1 a_2 a_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} a_1 a_2 a_3 \\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.400Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix} x_1\\\\x_2 x_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} x_1\\\\x_2 x_3 \\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.401Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix}\r\n      1 \\\\ 2 \\\\ 3\r\n    \\end{pmatrix}","cleaned":"\\begin{pmatrix}\r\n      1 \\\\ 2 \\\\ 3\r\n    \\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.401Z","version":"2026.08.25.34","event":"stats","original":"\\begin{bmatrix}\r\n      a \\\\ b \\\\ c\r\n    \\end{bmatrix}","cleaned":"\\begin{bmatrix}\r\n      a \\\\ b \\\\ c\r\n    \\end{bmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.401Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix}1\\\\2\\end{pmatrix}","cleaned":"\\begin{pmatrix}1\\\\2\\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.401Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix}2\\\\3\\end{pmatrix}","cleaned":"\\begin{pmatrix}2\\\\3\\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.401Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix}3\\\\4\\end{pmatrix}","cleaned":"\\begin{pmatrix}3\\\\4\\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.401Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix}4\\\\5\\end{pmatrix}","cleaned":"\\begin{pmatrix}4\\\\5\\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.401Z","version":"2026.08.25.34","event":"stats","original":"\\begin{pmatrix}5\\\\6\\end{pmatrix}","cleaned":"\\begin{pmatrix}5\\\\6\\end{pmatrix}","fixes":[]}
+{"time":"2026-08-27T16:35:21.402Z","version":"2026.08.25.34","event":"stats","original":"\r\n\\boxed{L=\\left\\{\\sum_{i=1}^{n} z_i\\mathbf{b}_i\\;\\middle|\\;z_i\\in\\mathbb{Z}\\right\\}}\r\n","cleaned":"\\boxed{L=\\left\\{\\sum_{i=1}^{n} z_i\\mathbf{b}_i\\;\\middle|\\;z_i\\in\\mathbb{Z}\\right\\}}","fixes":[]}
+{"time":"2026-08-27T16:35:21.402Z","version":"2026.08.25.34","event":"stats","original":"\r\n\\mathbf t = A\\mathbf s + \\mathbf e\r\n","cleaned":"\\mathbf t = A\\mathbf s + \\mathbf e","fixes":[]}
+{"time":"2026-08-27T16:35:21.402Z","version":"2026.08.25.34","event":"stats","original":"\r\n\\left( \\frac{a}{b} \\right)\r\n","cleaned":"\\left( \\frac{a}{b} \\right)","fixes":[]}
+{"time":"2026-08-27T16:35:21.402Z","version":"2026.08.25.34","event":"repair-result","original":"\\left{ a+b \\right}","cleaned":"\\left\\{a+b \\right\\}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.402Z","version":"2026.08.25.34","event":"stats","original":"\\left{ a+b \\right}\r","cleaned":"\\left\\{a+b \\right\\}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"repair-result","original":"\\left{ \\sum_{i=1}^{n} x_i \\right}","cleaned":"\\left\\{\\sum_{i=1\\right\\}^{n}x_i \\right\\}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"stats","original":"\\left{ \\sum_{i=1}^{n} x_i \\right}\r","cleaned":"\\left{ \\sum_{i=1}^{n} x_i \\right}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"repair-result","original":"\\rightarrowL","cleaned":"\\rightarrow L","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"stats","original":"\\rightarrowL\r","cleaned":"\\rightarrow L","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"repair-result","original":"\\RightarrowC","cleaned":"\\Rightarrow C","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"stats","original":"\\RightarrowC\r","cleaned":"\\Rightarrow C","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"stats","original":"\\left\\lfloor x \\right\\rceil\r","cleaned":"\\left\\lfloor x \\right\\rceil","fixes":[]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"stats","original":"\\left\\lceil x \\right\\rfloor\r","cleaned":"\\left\\lceil x \\right\\rfloor","fixes":[]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left(x+1","cleaned":"\\left(x+1\\right)","fixes":["parentheses"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"repair-result","original":"\\left( x+1","cleaned":"\\left(x+1\\right)","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"stats","original":"\\left( x+1\r","cleaned":"\\left(x+1\\right)","fixes":["parentheses","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left[ x+2]","cleaned":"\\left[ x+2]\\right]","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"repair-result","original":"\\left[ x+2","cleaned":"\\left[ x+2]\\right]","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.403Z","version":"2026.08.25.34","event":"stats","original":"\\left[ x+2\r","cleaned":"\\left[ x+2","fixes":["delimiter-pair","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|x+3","cleaned":"\\left|x+3\\right|","fixes":["absolute-value"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| x+3","cleaned":"\\left|x+3\\right|","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"stats","original":"\\left| x+3\r","cleaned":"\\left|x+3\\right|","fixes":["absolute-value","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"repair-result","original":"\\0","cleaned":"0","fixes":[]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"stats","original":"\\0\r","cleaned":"0","fixes":[]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"repair-result","original":"\\s_2","cleaned":"s_2","fixes":["vector","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"stats","original":"\\s_2\r","cleaned":"s_2","fixes":["vector","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"repair-result","original":"\\e_2","cleaned":"e_2","fixes":["vector","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"stats","original":"\\e_2\r","cleaned":"e_2","fixes":["vector","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"repair-result","original":"\\1","cleaned":"1","fixes":[]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"stats","original":"\\1\r","cleaned":"1","fixes":[]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\{x+y\\}","cleaned":"\\left\\{x+y\\}\\right\\}","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\{x+y\\}","cleaned":"\\left\\{x+y\\}\\right\\}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"stats","original":"\\left\\{x+y\\}\r","cleaned":"\\left\\{x+y\\}","fixes":["delimiter-pair","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"stats","original":"\\left( \\left[ \\left\\{ x + y \\right\\} \\right] \\right)\r","cleaned":"\\left( \\left[ \\left\\{ x + y \\right\\} \\right] \\right)","fixes":[]}
+{"time":"2026-08-27T16:35:21.404Z","version":"2026.08.25.34","event":"stats","original":"\\left\\langle \\left( a+b \\right) , \\left[ c+d \\right] \\right\\rangle\r","cleaned":"\\left\\langle \\left( a+b \\right) , \\left[ c+d \\right] \\right\\rangle","fixes":[]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\left( \\sum_{i=1}^{n} \\left[ x_i + y_i \\right] \\right)\r","cleaned":"\\left( \\sum_{i=1}^{n} \\left[ x_i + y_i \\right] \\right)","fixes":[]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\vec{x}\r","cleaned":"\\vec{x}","fixes":[]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\vec{y}_1\r","cleaned":"\\vec{y}_1","fixes":[]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\vec{v}_{12}\r","cleaned":"\\vec{v}_{12}","fixes":[]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\vec{x_1 x_2}\r","cleaned":"\\vec{x_1 x_2}","fixes":[]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"repair-result","original":"\\vec{x\\0}","cleaned":"\\vec{x0}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\vec{x\\0}\r","cleaned":"\\vec{x0}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"repair-result","original":"\\vec{x\\1}","cleaned":"\\vec{x1}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\vec{x\\1}\r","cleaned":"\\vec{x1}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\left| x \\right|\r","cleaned":"\\left| x \\right|","fixes":[]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|x+1","cleaned":"\\left|x+1\\right|","fixes":["absolute-value"]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| x+1","cleaned":"\\left|x+1\\right|","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"stats","original":"\\left| x+1\r","cleaned":"\\left|x+1\\right|","fixes":["absolute-value","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|\\frac{a}{b}","cleaned":"\\left|\\frac{a}{b}\\right|","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.405Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| \\frac{a}{b}","cleaned":"\\left|\\frac{a}{b}\\right|","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"stats","original":"\\left| \\frac{a}{b}\r","cleaned":"\\left|\\frac{a}{b}\\right|","fixes":["delimiter-pair","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|\\left(x+y \\right)","cleaned":"\\left|\\left(x+y \\right)\\right|","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| \\left( x+y \\right)","cleaned":"\\left|\\left(x+y \\right)\\right|","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"stats","original":"\\left| \\left( x+y \\right)\r","cleaned":"\\left|\\left(x+y \\right)\\right|","fixes":["delimiter-pair","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"stats","original":"\\boxed{L=\\left\\{\\sum_{i=1}^{n} z_i\\mathbf{b}_i\\;\\middle|\\;z_i\\in\\mathbb{Z}\\right\\}}\r","cleaned":"\\boxed{L=\\left\\{\\sum_{i=1}^{n} z_i\\mathbf{b}_i\\;\\middle|\\;z_i\\in\\mathbb{Z}\\right\\}}","fixes":[]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"stats","original":"\\mathbf t = A\\mathbf s + \\mathbf e\r","cleaned":"\\mathbf t = A\\mathbf s + \\mathbf e","fixes":[]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"stats","original":"\\left( \\frac{a}{b} \\right)\r","cleaned":"\\left( \\frac{a}{b} \\right)","fixes":[]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"stats","original":"\\unknown\r","cleaned":"\\unknown","fixes":[]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"repair-result","original":"\\supercommand","cleaned":"\\sup ercommand","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"stats","original":"\\supercommand\r","cleaned":"\\sup ercommand","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.406Z","version":"2026.08.25.34","event":"stats","original":"\\badmacro{x}\r","cleaned":"\\badmacro{x}","fixes":[]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left(a+b","cleaned":"\\left(a+b\\right)","fixes":["parentheses"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"repair-result","original":"\\left( a+b","cleaned":"\\left(a+b\\right)","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"stats","original":"\\left( a+b\r","cleaned":"\\left(a+b\\right)","fixes":["parentheses","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left[ a+b]","cleaned":"\\left[ a+b]\\right]","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"repair-result","original":"\\left[ a+b","cleaned":"\\left[ a+b]\\right]","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"stats","original":"\\left[ a+b\r","cleaned":"\\left[ a+b","fixes":["delimiter-pair","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\{a+b}","cleaned":"\\left\\{a+b}\\right\\}","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\{ a+b","cleaned":"\\left\\{a+b}\\right\\}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"stats","original":"\\left\\{ a+b\r","cleaned":"\\left\\{ a+b","fixes":["delimiter-pair","backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\langle a+b","cleaned":"\\left\\langle a+b\\right\\rangle","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\langle a+b","cleaned":"\\left\\langle a+b\\right\\rangle","fixes":[]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"stats","original":"\\left\\langle a+b\r","cleaned":"\\left\\langle a+b\\right\\rangle","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"stats","original":"\\left( \\sum_{i=1}^{n} \\left[ \\frac{x_i}{\\left| y_i \\right|} \\right] \\right)\r","cleaned":"\\left( \\sum_{i=1}^{n} \\left[ \\frac{x_i}{\\left| y_i \\right|} \\right] \\right)","fixes":[]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"stats","original":"\\left\\{ \\left( \\left[ \\left| x+y \\right| \\right] \\right) \\right\\}\r","cleaned":"\\left\\{ \\left( \\left[ \\left| x+y \\right| \\right] \\right) \\right\\}","fixes":[]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"repair-result","original":"\\boxed{","cleaned":"\\boxed{}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"stats","original":"\\boxed{\r","cleaned":"\\boxed{}","fixes":["backslash-artifact"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\langle","cleaned":"\\left\\langle\\right\\rangle","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.407Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\langle","cleaned":"\\left\\langle\\right\\rangle","fixes":[]}
+{"time":"2026-08-27T16:35:21.408Z","version":"2026.08.25.34","event":"stats","original":"  \\left\\langle\r","cleaned":"\\left\\langle\\right\\rangle","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.408Z","version":"2026.08.25.34","event":"stats","original":"  \\right\\rangle\r","cleaned":"\\right\\rangle","fixes":[]}
+{"time":"2026-08-27T16:35:21.408Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{1}=\\begin{pmatrix}1\\\\2\\end{pmatrix} \\right]\r","cleaned":"\\left[ \\vec{x}_{1}=\\begin{pmatrix}1\\\\2\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.408Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{2}=\\begin{pmatrix}2\\\\3\\end{pmatrix} \\right]\r","cleaned":"\\left[ \\vec{x}_{2}=\\begin{pmatrix}2\\\\3\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.408Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{3}=\\begin{pmatrix}3\\\\4\\end{pmatrix} \\right]\r","cleaned":"\\left[ \\vec{x}_{3}=\\begin{pmatrix}3\\\\4\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{4}=\\begin{pmatrix}4\\\\5\\end{pmatrix} \\right]\r","cleaned":"\\left[ \\vec{x}_{4}=\\begin{pmatrix}4\\\\5\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"stats","original":"\\left[ \\vec{x}_{5}=\\begin{pmatrix}5\\\\6\\end{pmatrix} \\right]\r","cleaned":"\\left[ \\vec{x}_{5}=\\begin{pmatrix}5\\\\6\\end{pmatrix} \\right]","fixes":[]}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"stats","original":" a+b=c ","cleaned":"a+b=c","fixes":[]}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"stats","original":" \\frac{a}{b} ","cleaned":"\\frac{a}{b}","fixes":[]}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"stats","original":" a+b=c ","cleaned":"a+b=c","fixes":[]}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"stats","original":" \\sqrt{2} ","cleaned":"\\sqrt{2}","fixes":[]}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"formula","original":"\\left[ c+d \\right]","cleaned":"\\left[ c+d \\right]"}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"formula","original":"\\left[ x_i + y_i \\right]","cleaned":"\\left[ x_i + y_i \\right]"}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\left| x+y \\right| \\right]","cleaned":"\\left[ \\left| x+y \\right| \\right]"}
+{"time":"2026-08-27T16:35:21.409Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{1}=\\begin{pmatrix}1\\\\2\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{1}=\\begin{pmatrix}1\\\\2\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{2}=\\begin{pmatrix}2\\\\3\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{2}=\\begin{pmatrix}2\\\\3\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{3}=\\begin{pmatrix}3\\\\4\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{3}=\\begin{pmatrix}3\\\\4\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{4}=\\begin{pmatrix}4\\\\5\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{4}=\\begin{pmatrix}4\\\\5\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{5}=\\begin{pmatrix}5\\\\6\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{5}=\\begin{pmatrix}5\\\\6\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"a^2 + b^2 = c^2","cleaned":"a^2 + b^2 = c^2"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"\\frac{a}{b} = \\sqrt{c}","cleaned":"\\frac{a}{b} = \\sqrt{c}"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"\\boxed{B^m}","cleaned":"\\boxed{B^m}"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"\\mathbb{R}^n","cleaned":"\\mathbb{R}^n"}
+{"time":"2026-08-27T16:35:21.410Z","version":"2026.08.25.34","event":"formula","original":"\\mathbf{x} + \\mathbf{y} = \\mathbf{z}","cleaned":"\\mathbf{x} + \\mathbf{y} = \\mathbf{z}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\mathrm{det}(A) = 5","cleaned":"\\mathrm{det}(A) = 5"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\text{Hello World}","cleaned":"\\text{Hello World}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}","cleaned":"\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix}","cleaned":"\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\begin{Bmatrix} x & y \\\\ z & w \\end{Bmatrix}","cleaned":"\\begin{Bmatrix} x & y \\\\ z & w \\end{Bmatrix}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\begin{vmatrix} 1 & 0 \\\\ 0 & 1 \\end{vmatrix}","cleaned":"\\begin{vmatrix} 1 & 0 \\\\ 0 & 1 \\end{vmatrix}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\begin{Vmatrix} 2 \\\\ 3 \\end{Vmatrix}","cleaned":"\\begin{Vmatrix} 2 \\\\ 3 \\end{Vmatrix}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} 1\\2 \\end{pmatrix}","cleaned":"\\begin{pmatrix}1\\\\2 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} x_1 x_2 x_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} x_1 x_2 x_3 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.411Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} 5-3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} 5-3 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.412Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} a_1 a_2 a_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} a_1 a_2 a_3 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.412Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} x_1\\\\x_2 x_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} x_1\\\\x_2 x_3 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.412Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}\r\n      1 \\\\ 2 \\\\ 3\r\n    \\end{pmatrix}","cleaned":"\\begin{pmatrix}\r\n      1 \\\\ 2 \\\\ 3\r\n    \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.412Z","version":"2026.08.25.34","event":"formula","original":"\\begin{bmatrix}\r\n      a \\\\ b \\\\ c\r\n    \\end{bmatrix}","cleaned":"\\begin{bmatrix}\r\n      a \\\\ b \\\\ c\r\n    \\end{bmatrix}"}
+{"time":"2026-08-27T16:35:21.412Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}1\\\\2\\end{pmatrix}","cleaned":"\\begin{pmatrix}1\\\\2\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.412Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}2\\\\3\\end{pmatrix}","cleaned":"\\begin{pmatrix}2\\\\3\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.412Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}3\\\\4\\end{pmatrix}","cleaned":"\\begin{pmatrix}3\\\\4\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.412Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}4\\\\5\\end{pmatrix}","cleaned":"\\begin{pmatrix}4\\\\5\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}5\\\\6\\end{pmatrix}","cleaned":"\\begin{pmatrix}5\\\\6\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\boxed{L=\\left\\{\\sum_{i=1}^{n} z_i\\mathbf{b}_i\\;\\middle|\\;z_i\\in\\mathbb{Z}\\right\\}}","cleaned":"\\boxed{L=\\left\\{\\sum_{i=1}^{n} z_i\\mathbf{b}_i\\;\\middle|\\;z_i\\in\\mathbb{Z}\\right\\}}"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\mathbf t = A\\mathbf s + \\mathbf e","cleaned":"\\mathbf t = A\\mathbf s + \\mathbf e"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\left( \\frac{a}{b} \\right)","cleaned":"\\left( \\frac{a}{b} \\right)"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\left{ a+b \\right}","cleaned":"\\left\\{a+b \\right\\}"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\left{ \\sum_{i=1}^{n} x_i \\right}","cleaned":"\\left{ \\sum_{i=1}^{n} x_i \\right}"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"katex-error","tex":"\\left{ \\sum_{i=1}^{n} x_i \\right}","fallback":"{ \\sum_{i=1}^{n} x_i }","error":"KaTeX parse error: Expected '}', got '\\right' at position 27: …_{i=1}^{n} x_i \\̲r̲i̲g̲h̲t̲}"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\rightarrowL","cleaned":"\\rightarrow L"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\RightarrowC","cleaned":"\\Rightarrow C"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\left\\lfloor x \\right\\rceil","cleaned":"\\left\\lfloor x \\right\\rceil"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"skipped","tex":"\\left\\lfloor x \\right\\rceil","reason":"Nesprávně spárované \\left/\\right delimitery."}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\left\\lceil x \\right\\rfloor","cleaned":"\\left\\lceil x \\right\\rfloor"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"skipped","tex":"\\left\\lceil x \\right\\rfloor","reason":"Nesprávně spárované \\left/\\right delimitery."}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\left( x+1","cleaned":"\\left(x+1\\right)"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\left[ x+2","cleaned":"\\left[ x+2"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"skipped","tex":"\\left[ x+2","reason":"Neuzavřená závorka nebo delimitér."}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\left| x+3","cleaned":"\\left|x+3\\right|"}
+{"time":"2026-08-27T16:35:21.413Z","version":"2026.08.25.34","event":"formula","original":"\\0","cleaned":"0"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\s_2","cleaned":"s_2"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\e_2","cleaned":"e_2"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\1","cleaned":"1"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\left\\{x+y\\}","cleaned":"\\left\\{x+y\\}"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"skipped","tex":"\\left\\{x+y\\}","reason":"Nesprávně spárované závorky."}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\left( \\left[ \\left\\{ x + y \\right\\} \\right] \\right)","cleaned":"\\left( \\left[ \\left\\{ x + y \\right\\} \\right] \\right)"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\left\\langle \\left( a+b \\right) , \\left[ c+d \\right] \\right\\rangle","cleaned":"\\left\\langle \\left( a+b \\right) , \\left[ c+d \\right] \\right\\rangle"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\left( \\sum_{i=1}^{n} \\left[ x_i + y_i \\right] \\right)","cleaned":"\\left( \\sum_{i=1}^{n} \\left[ x_i + y_i \\right] \\right)"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\vec{x}","cleaned":"\\vec{x}"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\vec{y}_1","cleaned":"\\vec{y}_1"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\vec{v}_{12}","cleaned":"\\vec{v}_{12}"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\vec{x_1 x_2}","cleaned":"\\vec{x_1 x_2}"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\vec{x\\0}","cleaned":"\\vec{x0}"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\vec{x\\1}","cleaned":"\\vec{x1}"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\left| x \\right|","cleaned":"\\left| x \\right|"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\left| x+1","cleaned":"\\left|x+1\\right|"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\left| \\frac{a}{b}","cleaned":"\\left|\\frac{a}{b}\\right|"}
+{"time":"2026-08-27T16:35:21.414Z","version":"2026.08.25.34","event":"formula","original":"\\left| \\left( x+y \\right)","cleaned":"\\left|\\left(x+y \\right)\\right|"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\unknown","cleaned":"\\unknown"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"skipped","tex":"\\unknown","reason":"Neznámý příkaz: \\unknown."}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\supercommand","cleaned":"\\sup ercommand"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\badmacro{x}","cleaned":"\\badmacro{x}"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"skipped","tex":"\\badmacro{x}","reason":"Neznámý příkaz: \\badmacro."}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\left( a+b","cleaned":"\\left(a+b\\right)"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\left[ a+b","cleaned":"\\left[ a+b"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"skipped","tex":"\\left[ a+b","reason":"Neuzavřená závorka nebo delimitér."}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\left\\{ a+b","cleaned":"\\left\\{ a+b"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"skipped","tex":"\\left\\{ a+b","reason":"Neuzavřená závorka nebo delimitér."}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\left\\langle a+b","cleaned":"\\left\\langle a+b\\right\\rangle"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\left( \\sum_{i=1}^{n} \\left[ \\frac{x_i}{\\left| y_i \\right|} \\right] \\right)","cleaned":"\\left( \\sum_{i=1}^{n} \\left[ \\frac{x_i}{\\left| y_i \\right|} \\right] \\right)"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\left\\{ \\left( \\left[ \\left| x+y \\right| \\right] \\right) \\right\\}","cleaned":"\\left\\{ \\left( \\left[ \\left| x+y \\right| \\right] \\right) \\right\\}"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\boxed{","cleaned":"\\boxed{}"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\left\\langle","cleaned":"\\left\\langle\\right\\rangle"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\right\\rangle","cleaned":"\\right\\rangle"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"skipped","tex":"\\right\\rangle","reason":"Osamocený příkaz \\right."}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"a+b=c","cleaned":"a+b=c"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\frac{a}{b}","cleaned":"\\frac{a}{b}"}
+{"time":"2026-08-27T16:35:21.415Z","version":"2026.08.25.34","event":"formula","original":"\\sqrt{2}","cleaned":"\\sqrt{2}"}
+{"time":"2026-08-27T16:35:21.429Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left{ \\sum_{i=1}^{n} x_i \\right}","fallback":"{ \\sum_{i=1}^{n} x_i }","error":"KaTeX parse error: Expected '}', got '\\right' at position 27: …_{i=1}^{n} x_i \\̲r̲i̲g̲h̲t̲}"}
+{"time":"2026-08-27T16:35:21.430Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left[ x+2","fallback":"[ x+2","error":"KaTeX parse error: Expected '\\right', got 'EOF' at end of input: \\left[ x+2"}
+{"time":"2026-08-27T16:35:21.430Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left\\{x+y\\}","fallback":"\\{x+y\\}","error":"KaTeX parse error: Expected '\\right', got 'EOF' at end of input: \\left\\{x+y\\}"}
+{"time":"2026-08-27T16:35:21.431Z","version":"2026.08.25.34","event":"formula","original":"\\left[ c+d \\right]","cleaned":"\\left[ c+d \\right]"}
+{"time":"2026-08-27T16:35:21.431Z","version":"2026.08.25.34","event":"formula","original":"\\left[ x_i + y_i \\right]","cleaned":"\\left[ x_i + y_i \\right]"}
+{"time":"2026-08-27T16:35:21.431Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\left| x+y \\right| \\right]","cleaned":"\\left[ \\left| x+y \\right| \\right]"}
+{"time":"2026-08-27T16:35:21.431Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{1}=\\begin{pmatrix}1\\\\2\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{1}=\\begin{pmatrix}1\\\\2\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.432Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{2}=\\begin{pmatrix}2\\\\3\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{2}=\\begin{pmatrix}2\\\\3\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.432Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{3}=\\begin{pmatrix}3\\\\4\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{3}=\\begin{pmatrix}3\\\\4\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.432Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{4}=\\begin{pmatrix}4\\\\5\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{4}=\\begin{pmatrix}4\\\\5\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.432Z","version":"2026.08.25.34","event":"formula","original":"\\left[ \\vec{x}_{5}=\\begin{pmatrix}5\\\\6\\end{pmatrix} \\right]","cleaned":"\\left[ \\vec{x}_{5}=\\begin{pmatrix}5\\\\6\\end{pmatrix} \\right]"}
+{"time":"2026-08-27T16:35:21.432Z","version":"2026.08.25.34","event":"formula","original":"a^2 + b^2 = c^2","cleaned":"a^2 + b^2 = c^2"}
+{"time":"2026-08-27T16:35:21.432Z","version":"2026.08.25.34","event":"formula","original":"\\frac{a}{b} = \\sqrt{c}","cleaned":"\\frac{a}{b} = \\sqrt{c}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\boxed{B^m}","cleaned":"\\boxed{B^m}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\mathbb{R}^n","cleaned":"\\mathbb{R}^n"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\mathbf{x} + \\mathbf{y} = \\mathbf{z}","cleaned":"\\mathbf{x} + \\mathbf{y} = \\mathbf{z}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\mathrm{det}(A) = 5","cleaned":"\\mathrm{det}(A) = 5"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\text{Hello World}","cleaned":"\\text{Hello World}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}","cleaned":"\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix}","cleaned":"\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\begin{Bmatrix} x & y \\\\ z & w \\end{Bmatrix}","cleaned":"\\begin{Bmatrix} x & y \\\\ z & w \\end{Bmatrix}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\begin{vmatrix} 1 & 0 \\\\ 0 & 1 \\end{vmatrix}","cleaned":"\\begin{vmatrix} 1 & 0 \\\\ 0 & 1 \\end{vmatrix}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\begin{Vmatrix} 2 \\\\ 3 \\end{Vmatrix}","cleaned":"\\begin{Vmatrix} 2 \\\\ 3 \\end{Vmatrix}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} 1\\2 \\end{pmatrix}","cleaned":"\\begin{pmatrix}1\\\\2 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.433Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} x_1 x_2 x_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} x_1 x_2 x_3 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} 5-3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} 5-3 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} a_1 a_2 a_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} a_1 a_2 a_3 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix} x_1\\\\x_2 x_3 \\end{pmatrix}","cleaned":"\\begin{pmatrix} x_1\\\\x_2 x_3 \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}\r\n      1 \\\\ 2 \\\\ 3\r\n    \\end{pmatrix}","cleaned":"\\begin{pmatrix}\r\n      1 \\\\ 2 \\\\ 3\r\n    \\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{bmatrix}\r\n      a \\\\ b \\\\ c\r\n    \\end{bmatrix}","cleaned":"\\begin{bmatrix}\r\n      a \\\\ b \\\\ c\r\n    \\end{bmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}1\\\\2\\end{pmatrix}","cleaned":"\\begin{pmatrix}1\\\\2\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}2\\\\3\\end{pmatrix}","cleaned":"\\begin{pmatrix}2\\\\3\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}3\\\\4\\end{pmatrix}","cleaned":"\\begin{pmatrix}3\\\\4\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}4\\\\5\\end{pmatrix}","cleaned":"\\begin{pmatrix}4\\\\5\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\begin{pmatrix}5\\\\6\\end{pmatrix}","cleaned":"\\begin{pmatrix}5\\\\6\\end{pmatrix}"}
+{"time":"2026-08-27T16:35:21.434Z","version":"2026.08.25.34","event":"formula","original":"\\boxed{L=\\left\\{\\sum_{i=1}^{n} z_i\\mathbf{b}_i\\;\\middle|\\;z_i\\in\\mathbb{Z}\\right\\}}","cleaned":"\\boxed{L=\\left\\{\\sum_{i=1}^{n} z_i\\mathbf{b}_i\\;\\middle|\\;z_i\\in\\mathbb{Z}\\right\\}}"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\mathbf t = A\\mathbf s + \\mathbf e","cleaned":"\\mathbf t = A\\mathbf s + \\mathbf e"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left( \\frac{a}{b} \\right)","cleaned":"\\left( \\frac{a}{b} \\right)"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left{ a+b \\right}","cleaned":"\\left\\{a+b \\right\\}"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left{ \\sum_{i=1}^{n} x_i \\right}","cleaned":"\\left{ \\sum_{i=1}^{n} x_i \\right}"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"katex-error","tex":"\\left{ \\sum_{i=1}^{n} x_i \\right}","fallback":"{ \\sum_{i=1}^{n} x_i }","error":"KaTeX parse error: Expected '}', got '\\right' at position 27: …_{i=1}^{n} x_i \\̲r̲i̲g̲h̲t̲}"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\rightarrowL","cleaned":"\\rightarrow L"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\RightarrowC","cleaned":"\\Rightarrow C"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left\\lfloor x \\right\\rceil","cleaned":"\\left\\lfloor x \\right\\rceil"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"skipped","tex":"\\left\\lfloor x \\right\\rceil","reason":"Nesprávně spárované \\left/\\right delimitery."}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left\\lceil x \\right\\rfloor","cleaned":"\\left\\lceil x \\right\\rfloor"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"skipped","tex":"\\left\\lceil x \\right\\rfloor","reason":"Nesprávně spárované \\left/\\right delimitery."}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left( x+1","cleaned":"\\left(x+1\\right)"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left[ x+2","cleaned":"\\left[ x+2"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"skipped","tex":"\\left[ x+2","reason":"Neuzavřená závorka nebo delimitér."}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left| x+3","cleaned":"\\left|x+3\\right|"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\0","cleaned":"0"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\s_2","cleaned":"s_2"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\e_2","cleaned":"e_2"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\1","cleaned":"1"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left\\{x+y\\}","cleaned":"\\left\\{x+y\\}"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"skipped","tex":"\\left\\{x+y\\}","reason":"Nesprávně spárované závorky."}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left( \\left[ \\left\\{ x + y \\right\\} \\right] \\right)","cleaned":"\\left( \\left[ \\left\\{ x + y \\right\\} \\right] \\right)"}
+{"time":"2026-08-27T16:35:21.435Z","version":"2026.08.25.34","event":"formula","original":"\\left\\langle \\left( a+b \\right) , \\left[ c+d \\right] \\right\\rangle","cleaned":"\\left\\langle \\left( a+b \\right) , \\left[ c+d \\right] \\right\\rangle"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\left( \\sum_{i=1}^{n} \\left[ x_i + y_i \\right] \\right)","cleaned":"\\left( \\sum_{i=1}^{n} \\left[ x_i + y_i \\right] \\right)"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\vec{x}","cleaned":"\\vec{x}"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\vec{y}_1","cleaned":"\\vec{y}_1"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\vec{v}_{12}","cleaned":"\\vec{v}_{12}"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\vec{x_1 x_2}","cleaned":"\\vec{x_1 x_2}"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\vec{x\\0}","cleaned":"\\vec{x0}"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\vec{x\\1}","cleaned":"\\vec{x1}"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\left| x \\right|","cleaned":"\\left| x \\right|"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\left| x+1","cleaned":"\\left|x+1\\right|"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\left| \\frac{a}{b}","cleaned":"\\left|\\frac{a}{b}\\right|"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\left| \\left( x+y \\right)","cleaned":"\\left|\\left(x+y \\right)\\right|"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\unknown","cleaned":"\\unknown"}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"skipped","tex":"\\unknown","reason":"Neznámý příkaz: \\unknown."}
+{"time":"2026-08-27T16:35:21.436Z","version":"2026.08.25.34","event":"formula","original":"\\supercommand","cleaned":"\\sup ercommand"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\badmacro{x}","cleaned":"\\badmacro{x}"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"skipped","tex":"\\badmacro{x}","reason":"Neznámý příkaz: \\badmacro."}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\left( a+b","cleaned":"\\left(a+b\\right)"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\left[ a+b","cleaned":"\\left[ a+b"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"skipped","tex":"\\left[ a+b","reason":"Neuzavřená závorka nebo delimitér."}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\left\\{ a+b","cleaned":"\\left\\{ a+b"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"skipped","tex":"\\left\\{ a+b","reason":"Neuzavřená závorka nebo delimitér."}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\left\\langle a+b","cleaned":"\\left\\langle a+b\\right\\rangle"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\left( \\sum_{i=1}^{n} \\left[ \\frac{x_i}{\\left| y_i \\right|} \\right] \\right)","cleaned":"\\left( \\sum_{i=1}^{n} \\left[ \\frac{x_i}{\\left| y_i \\right|} \\right] \\right)"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\left\\{ \\left( \\left[ \\left| x+y \\right| \\right] \\right) \\right\\}","cleaned":"\\left\\{ \\left( \\left[ \\left| x+y \\right| \\right] \\right) \\right\\}"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\boxed{","cleaned":"\\boxed{}"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\left\\langle","cleaned":"\\left\\langle\\right\\rangle"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\right\\rangle","cleaned":"\\right\\rangle"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"skipped","tex":"\\right\\rangle","reason":"Osamocený příkaz \\right."}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"a+b=c","cleaned":"a+b=c"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\frac{a}{b}","cleaned":"\\frac{a}{b}"}
+{"time":"2026-08-27T16:35:21.437Z","version":"2026.08.25.34","event":"formula","original":"\\sqrt{2}","cleaned":"\\sqrt{2}"}
+{"time":"2026-08-27T16:35:21.438Z","version":"2026.08.25.34","event":"repair-result","original":"\\left{ a+b \\right}\r","cleaned":"\\left\\{a+b \\right\\}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.438Z","version":"2026.08.25.34","event":"repair-result","original":"\\left{ a+b \\right}\r","cleaned":"\\left\\{a+b \\right\\}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.438Z","version":"2026.08.25.34","event":"repair-result","original":"\\left{ \\sum_{i=1}^{n} x_i \\right}\r","cleaned":"\\left\\{\\sum_{i=1\\right\\}^{n}x_i \\right\\}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.438Z","version":"2026.08.25.34","event":"repair-result","original":"\\left{ \\sum_{i=1}^{n} x_i \\right}\r","cleaned":"\\left\\{\\sum_{i=1\\right\\}^{n}x_i \\right\\}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.438Z","version":"2026.08.25.34","event":"repair-result","original":"\\rightarrowL\r","cleaned":"\\rightarrow L","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.438Z","version":"2026.08.25.34","event":"repair-result","original":"\\rightarrowL\r","cleaned":"\\rightarrow L","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.438Z","version":"2026.08.25.34","event":"repair-result","original":"\\RightarrowC\r","cleaned":"\\Rightarrow C","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.438Z","version":"2026.08.25.34","event":"repair-result","original":"\\RightarrowC\r","cleaned":"\\Rightarrow C","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left(x+1","cleaned":"\\left(x+1\\right)","fixes":["parentheses"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\left( x+1\r","cleaned":"\\left(x+1\\right)","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left(x+1","cleaned":"\\left(x+1\\right)","fixes":["parentheses"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\left( x+1\r","cleaned":"\\left(x+1\\right)","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left[ x+2]","cleaned":"\\left[ x+2]\\right]","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\left[ x+2\r","cleaned":"\\left[ x+2]\\right]","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left[ x+2]","cleaned":"\\left[ x+2]\\right]","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\left[ x+2\r","cleaned":"\\left[ x+2]\\right]","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|x+3","cleaned":"\\left|x+3\\right|","fixes":["absolute-value"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| x+3\r","cleaned":"\\left|x+3\\right|","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|x+3","cleaned":"\\left|x+3\\right|","fixes":["absolute-value"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| x+3\r","cleaned":"\\left|x+3\\right|","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\0\r","cleaned":"0","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\0\r","cleaned":"0","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\s_2\r","cleaned":"s_2","fixes":["trim","vector"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\s_2\r","cleaned":"s_2","fixes":["trim","vector"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\e_2\r","cleaned":"e_2","fixes":["trim","vector"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\e_2\r","cleaned":"e_2","fixes":["trim","vector"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\1\r","cleaned":"1","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\1\r","cleaned":"1","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\{x+y\\}","cleaned":"\\left\\{x+y\\}\\right\\}","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\{x+y\\}\r","cleaned":"\\left\\{x+y\\}\\right\\}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\{x+y\\}","cleaned":"\\left\\{x+y\\}\\right\\}","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.439Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\{x+y\\}\r","cleaned":"\\left\\{x+y\\}\\right\\}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.440Z","version":"2026.08.25.34","event":"repair-result","original":"\\vec{x\\0}\r","cleaned":"\\vec{x0}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.440Z","version":"2026.08.25.34","event":"repair-result","original":"\\vec{x\\0}\r","cleaned":"\\vec{x0}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.440Z","version":"2026.08.25.34","event":"repair-result","original":"\\vec{x\\1}\r","cleaned":"\\vec{x1}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.440Z","version":"2026.08.25.34","event":"repair-result","original":"\\vec{x\\1}\r","cleaned":"\\vec{x1}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|x+1","cleaned":"\\left|x+1\\right|","fixes":["absolute-value"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| x+1\r","cleaned":"\\left|x+1\\right|","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|x+1","cleaned":"\\left|x+1\\right|","fixes":["absolute-value"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| x+1\r","cleaned":"\\left|x+1\\right|","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|\\frac{a}{b}","cleaned":"\\left|\\frac{a}{b}\\right|","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| \\frac{a}{b}\r","cleaned":"\\left|\\frac{a}{b}\\right|","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|\\frac{a}{b}","cleaned":"\\left|\\frac{a}{b}\\right|","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| \\frac{a}{b}\r","cleaned":"\\left|\\frac{a}{b}\\right|","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|\\left(x+y \\right)","cleaned":"\\left|\\left(x+y \\right)\\right|","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| \\left( x+y \\right)\r","cleaned":"\\left|\\left(x+y \\right)\\right|","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left|\\left(x+y \\right)","cleaned":"\\left|\\left(x+y \\right)\\right|","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.441Z","version":"2026.08.25.34","event":"repair-result","original":"\\left| \\left( x+y \\right)\r","cleaned":"\\left|\\left(x+y \\right)\\right|","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\unknown\r","cleaned":"\\unknown","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\supercommand\r","cleaned":"\\sup ercommand","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\supercommand\r","cleaned":"\\sup ercommand","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\badmacro{x}\r","cleaned":"\\badmacro{x}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left(a+b","cleaned":"\\left(a+b\\right)","fixes":["parentheses"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\left( a+b\r","cleaned":"\\left(a+b\\right)","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left(a+b","cleaned":"\\left(a+b\\right)","fixes":["parentheses"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\left( a+b\r","cleaned":"\\left(a+b\\right)","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left[ a+b]","cleaned":"\\left[ a+b]\\right]","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\left[ a+b\r","cleaned":"\\left[ a+b]\\right]","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left[ a+b]","cleaned":"\\left[ a+b]\\right]","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\left[ a+b\r","cleaned":"\\left[ a+b]\\right]","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\{a+b}","cleaned":"\\left\\{a+b}\\right\\}","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\{ a+b\r","cleaned":"\\left\\{a+b}\\right\\}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\{a+b}","cleaned":"\\left\\{a+b}\\right\\}","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\{ a+b\r","cleaned":"\\left\\{a+b}\\right\\}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"parser-overflow","tex":"\\left\\{ a+b\r","maxSteps":1000}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\langle a+b","cleaned":"\\left\\langle a+b\\right\\rangle","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\langle a+b\r","cleaned":"\\left\\langle a+b\\right\\rangle","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\langle a+b","cleaned":"\\left\\langle a+b\\right\\rangle","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.442Z","version":"2026.08.25.34","event":"repair-result","original":"\\left\\langle a+b\r","cleaned":"\\left\\langle a+b\\right\\rangle","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.443Z","version":"2026.08.25.34","event":"repair-result","original":"\\boxed{\r","cleaned":"\\boxed{}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.443Z","version":"2026.08.25.34","event":"repair-result","original":"\\boxed{\r","cleaned":"\\boxed{}","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.443Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\langle","cleaned":"\\left\\langle\\right\\rangle","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.443Z","version":"2026.08.25.34","event":"repair-result","original":"  \\left\\langle\r","cleaned":"\\left\\langle\\right\\rangle","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.443Z","version":"2026.08.25.34","event":"heuristic-fix","original":"\\left\\langle","cleaned":"\\left\\langle\\right\\rangle","fixes":["delimiter-pair"]}
+{"time":"2026-08-27T16:35:21.443Z","version":"2026.08.25.34","event":"repair-result","original":"  \\left\\langle\r","cleaned":"\\left\\langle\\right\\rangle","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.444Z","version":"2026.08.25.34","event":"repair-result","original":"  \\right\\rangle\r","cleaned":"\\right\\rangle","fixes":["trim"]}
+{"time":"2026-08-27T16:35:21.460Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\unknown","fallback":"\\unknown","error":"KaTeX parse error: Undefined control sequence: \\unknown at position 1: \\̲u̲n̲k̲n̲o̲w̲n̲"}
+{"time":"2026-08-27T16:35:21.460Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\badmacro{x}","fallback":"\\badmacro{x}","error":"KaTeX parse error: Undefined control sequence: \\badmacro at position 1: \\̲b̲a̲d̲m̲a̲c̲r̲o̲{x}"}
+{"time":"2026-08-27T16:35:21.460Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left[ a+b","fallback":"[ a+b","error":"KaTeX parse error: Expected '\\right', got 'EOF' at end of input: \\left[ a+b"}
+{"time":"2026-08-27T16:35:21.460Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left\\{ a+b","fallback":"\\{ a+b","error":"KaTeX parse error: Expected '\\right', got 'EOF' at end of input: \\left\\{ a+b"}
+{"time":"2026-08-27T16:35:21.461Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\right\\rangle","fallback":"\\rangle","error":"KaTeX parse error: Expected 'EOF', got '\\right' at position 1: \\̲r̲i̲g̲h̲t̲\\rangle"}
+{"time":"2026-08-27T16:35:21.515Z","version":"2026.08.25.34","event":"export-error","error":"Kontrola našla jen 55 objektů Office Math, očekáváno nejméně 70."}

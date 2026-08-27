@@ -1,0 +1,7 @@
+Nevyhodnocené nebo nepodporované zápisy (3)
+\left[ \left( \left\{ \left\langle \sqrt{ \frac{a}{b} } \right\rangle \right\} \right) \right]
+KaTeX: KaTeX parse error: Expected '\right', got 'EOF' at end of input: …}\right)\right]
+\left[ \left( \left\{ \left\langle \sqrt{ \frac{a_2}{b_2} } \right\rangle \right\} \right) \right]
+KaTeX: KaTeX parse error: Expected '\right', got 'EOF' at end of input: …}\right)\right]
+\left[ \frac{a}{b} \left( a+b ] \sqrt{a+b \begin{pmatrix}1&2\\3 \vec{x} \mathbbF \oplusValue \vdashProof ... (20×) ================================================ 9) EXTRÉMNĚ DLOUHÉ ŘETĚZCE (20×) ================================================ a_1+a_2+a_3+...+a_{200} b_1b_2b_3...b_{200} \frac{a_1+a_2+...+a_{200}}{b_1+b_2+...+b_{200}} ... (20×) ================================================ 10) HYBRIDNÍ WORD/LATEX MIX (20×) ================================================ RAM_{req uired}\leqRA M_{ava ilable} \mathbf{x}\begin{pmatrix}x_1\x_2\\vdots\x_n\end{pmatrix} \left\{x+y \} \left\lfloor x \rfloor ... (20×) ================================================ 11) TESTY HRANATÝCH ZÁVOREK (20×) ================================================ \left[ a+b \right]
+KaTeX: KaTeX parse error: Expected & or \\ or \cr or \end at position 750: …ft[ a+b \right]}̲

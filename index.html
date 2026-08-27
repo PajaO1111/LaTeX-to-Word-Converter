@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LaTeX → rovnice ve Wordu</title>
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Tmavý režim</button>
+      <p class="eyebrow">Lokální převod – bez odesílání souborů</p>
+      <h1>LaTeX do rovnic ve Wordu</h1>
+      <p class="lead">Načtěte dokument nebo vložte text z Wordu. Zápisy mezi samostatnými <code>[</code> a <code>]</code>, stejně jako <code>\[</code> a <code>\]</code>, se převedou na nativní rovnice Wordu; náhled využívá přibalený KaTeX.</p>
+    </header>
+
+    <section class="card source-card">
+      <div class="card-heading"><span class="step">1</span><div><h2>Zdroj</h2><p>Vyberte jednu z možností. Všechno zůstává v tomto prohlížeči.</p></div></div>
+      <div class="source-grid">
+        <label class="drop-zone" for="docx-file">
+          <input id="docx-file" type="file" accept=".docx,.tex,.txt,.md,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+          <strong>Nahrát DOCX nebo TXT</strong>
+          <span>DOCX zachová strukturu dokumentu; prostý text se převede do nového Wordu s upravenými rovnicemi.</span>
+          <em id="file-name">Žádný soubor není vybrán</em>
+        </label>
+        <div class="paste-area">
+          <div class="paste-title"><strong>Vložit z Wordu</strong><span>Pro zachování tučného písma, seznamů a tabulek vložte obsah sem.</span></div>
+          <div id="editor" class="editor" contenteditable="true" data-placeholder="Vložte sem text z Wordu. Například: [ \boxed{B^m} ]"></div>
+          <details><summary>Jen prostý text</summary><textarea id="plain-text" spellcheck="false" placeholder="Sem lze vložit čistý text s LaTeXem."></textarea><button type="button" class="minor" id="use-plain-text">Použít prostý text</button></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="card options-card">
+      <div class="card-heading"><span class="step">2</span><div><h2>Kontrola zápisu</h2><p>Vyhledávání pracuje se závorkami i příkazy začínajícími zpětným lomítkem.</p></div></div>
+      <div class="options">
+        <label><input id="convert-inline" type="checkbox" checked> Převádět také inline zápis <code>\( ... \)</code> a <code>$...$</code></label>
+        <label><input id="convert-paren" type="checkbox"> Rozpoznat i zápis v kulatých závorkách, např. <code>(\mathbf x)</code></label>
+        <label><input id="warn-vector-equals" type="checkbox" checked> Upozorňovat na možný chybějící znak <code>=</code> před vektorem</label>
+        <button id="scan" type="button">Zkontrolovat a zobrazit náhled</button>
+      </div>
+      <div id="diagnostics" class="diagnostics" aria-live="polite">Zatím nebyl načten žádný obsah.</div>
+      <details class="stats-details"><summary>Statistiky kontroly</summary><div id="stats" class="stats">Statistiky se zobrazí po kontrole.</div></details>
+    </section>
+
+    <section class="card preview-card">
+      <div class="card-heading"><span class="step">3</span><div><h2>Náhled rovnic</h2><p>Červené položky je nutné opravit před vytvořením DOCX; nezávazná vektorová upozornění export neblokují.</p></div></div>
+      <div id="preview" class="preview empty">Náhled se zobrazí po kontrole.</div>
+      <div id="unprocessed" class="unprocessed ok">Přehled nevyhodnocených zápisů se zobrazí po kontrole.</div>
+    </section>
+
+    <section class="card export-card">
+      <div class="card-heading"><span class="step">4</span><div><h2>Výstup</h2><p>Stažený soubor obsahuje nativní objekty rovnic Office Math (OMML), nikoli obrázky.</p></div></div>
+      <button id="download" type="button" class="primary">Ověřit a stáhnout upravený DOCX</button>
+      <p id="export-note" class="muted">Před stažením proběhne kontrola ZIP balíčku, XML a objektů Office Math.</p>
+    </section>
+
+    <section class="card stress-card">
+      <div class="card-heading"><span class="step">5</span><div><h2>Testovací režim</h2><p>Spustí lokální zátěžový test převodu bez odesílání dat.</p></div></div>
+      <button id="stress-test" type="button">Spustit test 500+ rovnic</button>
+      <div id="stress-results" class="diagnostics" aria-live="polite">Test zatím nebyl spuštěn.</div>
+    </section>
+
+    <footer>Funguje offline: KaTeX 0.18.1 a JSZip jsou součástí této složky. Dokument se nikam neodesílá.</footer>
+  </main>
+  <script src="vendor/jszip.min.js"></script>
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="app.js?v=42"></script>
+</body>
+</html>

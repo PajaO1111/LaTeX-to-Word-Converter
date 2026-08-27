@@ -1,0 +1,173 @@
+###############################################
+# ULTRA TESTOVACÍ BALÍK PRO LATEX → WORD #
+###############################################
+
+================================================
+1) ZÁKLADNÍ ROVNICE — SPRÁVNÉ
+================================================
+
+\boxed{A^{2}+B^{2}=C^{2}}
+\frac{1}{\sqrt{2\pi\sigma^{2}}} e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}
+\int_{0}^{\infty} x^{n} e^{-x} \, dx = n!
+\sum_{i=1}^{n} i^{2} = \frac{n(n+1)(2n+1)}{6}
+\lim_{x\to 0} \frac{\sin x}{x} = 1
+\mathbb{R},\ \mathbb{Z},\ \mathbb{Q},\ \mathbb{C}
+\vec{v} = (v_1, v_2, v_3)
+\overrightarrow{AB}
+\widehat{xyz}
+\sqrt[3]{x^2 + 1}
+
+================================================
+2) MATICOVÉ A VEKTOROVÉ TESTY
+================================================
+
+\begin{pmatrix}1 & 2 \\ 3 & 4\end{pmatrix}
+\begin{bmatrix}a & b \\ c & d\end{bmatrix}
+\begin{Bmatrix}x \\ y \\ z\end{Bmatrix}
+\begin{vmatrix}a & b \\ c & d\end{vmatrix}
+\begin{Vmatrix}x & y \\ z & w\end{Vmatrix}
+
+# Word artefakty:
+\begin{pmatrix}1\2 \\ 3\4\end{pmatrix}
+\begin{pmatrix}x_1\x_2\\vdots\x_n\end{pmatrix}
+\begin{pmatrix}2\-1\end{pmatrix}
+\begin{pmatrix}3\\\\\\end{pmatrix}
+
+================================================
+3) ALIGN, CASES, ARRAY — KOMPLEXNÍ STRUKTURY
+================================================
+
+\begin{aligned}
+f(x) &= x^2 + 1 \\
+g(x) &= \frac{1}{x}
+\end{aligned}
+
+\begin{cases}
+x+1 & \text{pokud } x>0 \\
+0 & \text{jinak}
+\end{cases}
+
+\begin{array}{ccc}
+a & b & c \\
+1 & 2 & 3
+\end{array}
+
+# Word chyby:
+\begin{aligned}
+f(x) &= x^2 + 1 \\
+g(x) &= \frac{1}{x}
+\endaligned
+
+\begin{cases}
+x+1 & text{pokud } x>0 \\
+0 & jinak
+\endcases
+
+================================================
+4) DELIMITERY — LEFT/RIGHT CHAOS
+================================================
+
+\left( x + y \right)
+\left[ \frac{a}{b} \right]
+\left\{ x^2 + y^2 \right\}
+\left\langle a, b \right\rangle
+\left| x \right|
+
+# Chyby:
+\left( x + y
+\right x+y\}
+\left\lfloor x \rfloor
+\left\lceil x \rceil
+\left\lfloor x \right\rceil
+\left\lceil x \right\rfloor
+\left[)\left\{]}
+
+================================================
+5) OPERÁTORY — VŠECHNY VARIANTY
+================================================
+
+x \oplus y,\ x \otimes y,\ x \odot y
+a \cup b,\ a \cap b
+p \nmid q,\ p \mid q
+x \parallel y
+x \perp y
+a \equiv b \pmod n
+\gcd(a,b)
+\deg(f)
+\ker(T)
+\operatorname{wt}(x)
+
+# Chyby:
+\oplusValue
+\vdashProof
+\div
+\nmida
+\pmodn
+
+================================================
+6) SYMBOLY — MAXIMÁLNÍ ROZSAH
+================================================
+
+\alpha,\beta,\gamma,\delta,\epsilon,\varepsilon,\theta,\lambda,\mu,\xi,\pi,\rho,\sigma,\tau,\phi,\varphi,\psi,\omega
+\Gamma,\Delta,\Theta,\Lambda,\Xi,\Pi,\Sigma,\Phi,\Psi,\Omega
+\infty,\emptyset,\exists,\forall,\nabla,\partial
+\subseteq,\supseteq,\subset,\supset
+\ll,\gg,\lesssim,\gtrsim
+
+# Word chyby:
+\varphin
+\mathbbF
+\DeltaX
+
+================================================
+7) BOXED, OVERS, UNDERS, STACKS
+================================================
+
+\boxed{x^2 + y^2}
+\overset{!}{=}
+\underset{n\to\infty}{\lim}
+\stackrel{def}{=}
+\overbrace{a+b+c}^{\text{suma}}
+\underbrace{xyz}_{\text{trojice}}
+
+# Chyby:
+\boxed{\left\{\sum_{i=1}^{n}z_i\mathbf{b}_i \;\middle|\;z_i\in\mathbb{Z}\}}
+\boxed{H \vdashC}
+
+================================================
+8) INLINE TESTY
+================================================
+
+Text s inline rovnicí \( a^{\varphi(n)} \equiv 1 \pmod n \).
+Další inline: $p \nmid a$.
+Ještě jeden: \( \frac{1}{x+y} \).
+
+# Chyby:
+\( a^{\varphi(n)}\equiv 1 \pmodn \)
+$ x \oplusy = z $
+
+================================================
+9) KOMBINACE CHYB — CHAOS
+================================================
+
+RAM_{req uired}\leqRA M_{ava ilable}
+\mathbf{x}\begin{pmatrix}x_1\\x_2\\vdots\\x_n\end{pmatrix}
+\mathbf{x}\begin{pmatrix}2\\\-1\end{pmatrix}
+\mathbf{y}\begin{pmatrix}4\\\\\\\end{pmatrix}
+c\mathbf{x}\begin{pmatrix}3\\2\end{pmatrix}
+A\mathbf{x}\begin{pmatrix}16\\3\end{pmatrix}
+A\mathbf{s}+\mathbf{e}\begin{pmatrix}19\\3\end{pmatrix}
+
+================================================
+10) NEEXISTUJÍCÍ PŘÍKAZY
+================================================
+
+\superfrac{a}{b}
+\megaoperator{x}
+\unknowncommand
+\leftsuper{x}
+\rightfloor{x}
+
+================================================
+KONEC ULTRA TESTOVACÍHO SOUBORU
+================================================

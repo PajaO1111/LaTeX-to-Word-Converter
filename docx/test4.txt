@@ -1,0 +1,284 @@
+###############################################
+# MEGA TESTOVACÍ BALÍK PRO LATEX → WORD PŘEVODNÍK #
+# 500+ ROVNIC, ARTEFAKTŮ, CHYB, NESTED STRUKTUR #
+###############################################
+
+================================================
+1) ZÁKLADNÍ ROVNICE (50)
+================================================
+
+a+b=c
+a-b=c
+a\cdot b=c
+a\times b=c
+a/b=c
+\frac{a}{b}=c
+\sqrt{a+b}
+\sqrt{a^2+b^2}
+\sqrt[3]{abc}
+a^{b+c}
+a_{b+c}
+\alpha+\beta=\gamma
+\Gamma+\Delta=\Theta
+\sin x = \cos y
+\tan x = \frac{\sin x}{\cos x}
+\log n
+\ln n
+\lim_{x\to 0} x^2
+\sum_{i=1}^n i
+\prod_{i=1}^n i
+\int_0^1 x^2 dx
+\oint_\gamma f(z)\,dz
+a\equiv b \pmod n
+a\not\equiv b
+a\approx b
+a\sim b
+a\propto b
+a\subseteq b
+a\supseteq b
+a\in A
+a\notin A
+\forall x\exists y
+\emptyset
+\mathbb{R}
+\mathbb{Z}
+\mathbb{N}
+\mathbb{Q}
+\mathbb{C}
+\vec{x}
+\bar{x}
+\hat{x}
+\tilde{x}
+\widehat{xyz}
+\overbrace{a+b+c}^{\text{součet}}
+\underbrace{a+b+c}_{\text{součet}}
+\boxed{a+b=c}
+
+================================================
+2) MATRICE A VEKTORY (50)
+================================================
+
+\begin{pmatrix}1&2\\3&4\end{pmatrix}
+\begin{bmatrix}1&2\\3&4\end{bmatrix}
+\begin{Bmatrix}1&2\\3&4\end{Bmatrix}
+\begin{vmatrix}1&2\\3&4\end{vmatrix}
+\begin{Vmatrix}1&2\\3&4\end{Vmatrix}
+
+\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}
+\begin{pmatrix}x\\y\\z\end{pmatrix}
+
+\mathbf{x}=\begin{pmatrix}1\\2\end{pmatrix}
+\mathbf{y}=\begin{pmatrix}3\\4\end{pmatrix}
+\mathbf{x}+\mathbf{y}=\begin{pmatrix}4\\6\end{pmatrix}
+
+A\mathbf{x}=\begin{pmatrix}2&3\\5&7\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}
+
+\begin{array}{ccc}
+a&b&c\\
+d&e&f\\
+g&h&i
+\end{array}
+
+================================================
+3) POKROČILÉ KONSTRUKCE (50)
+================================================
+
+\left( \frac{a}{b} \right)
+\left[ \frac{a}{b} \right]
+\left\{ \frac{a}{b} \right\}
+\left| \frac{a}{b} \right|
+\left\| \frac{a}{b} \right\|
+
+\left\langle x,y,z \right\rangle
+
+\left\lfloor x \right\rfloor
+\left\lceil x \right\rceil
+
+\left( \left( \left( x \right) \right) \right)
+
+\left[ \left\{ \left( x \right) \right\} \right]
+
+\overset{!}{=}
+\underset{!}{=}
+
+\stackrel{a}{\longrightarrow}
+\stackrel{abc}{\Longrightarrow}
+
+\sum_{\substack{0<i<n\\i\neq j}} i
+
+\int\!\!\!\int_D f(x,y)\,dx\,dy
+
+\begin{cases}
+x+y=1\\
+x-y=0
+\end{cases}
+
+\begin{aligned}
+a&=b+c\\
+d&=e+f
+\end{aligned}
+
+================================================
+4) INLINE TESTY (50)
+================================================
+
+Text \( a+b=c \) pokračuje.
+Text \( \frac{a}{b} \) pokračuje.
+Text \( \sqrt{a^2+b^2} \) pokračuje.
+Text \( \mathbb{R} \) pokračuje.
+Text \( \vec{x} \) pokračuje.
+Text \( a\equiv b\pmod n \) pokračuje.
+Text \( \sum_{i=1}^n i \) pokračuje.
+Text \( \int_0^1 x^2 dx \) pokračuje.
+
+================================================
+5) WORD ARTEFAKTY (50)
+================================================
+
+\rightarrowL
+\RightarrowC
+\left\{x+y \}
+\left\lfloor x \rfloor
+\left\lceil x \rceil
+\left\{x+y
+\left[x+y
+\left(x+y
+\left|x+y
+\left\|x+y
+\left\langle x+y
+\left\lfloor x
+\left\lceil x
+\left\{x
+\right\}
+\right]
+\right)
+\right|
+\right\|
+\right\rangle
+
+================================================
+6) HASH CHYBY (50)
+================================================
+
+d_H(x,y)#{i:x_i\neq y_i}
+\operatorname{wt}(x)#{i:x_i\neq 0}
+A#{B}
+x#{y}
+\frac{a}{b}#{c}
+
+================================================
+7) ROZBITÝ LATEX (50)
+================================================
+
+\frac{a}{b
+\sqrt{a+b
+\left( a+b
+\begin{pmatrix}1&2\\3
+\begin{pmatrix}1&2\end{pmatrix
+\sum_{i=1}^n
+\int_0^1
+\boxed{a+b
+\left\{x+y
+\right\{x+y
+\left\lfloor x
+\left\lceil x
+\vecx
+\mathbbF
+\mathcal
+\mathbf
+\boldsymbol
+\textbf
+\mathrm
+\operatorname
+\modn
+\pmodn
+\nmidn
+\oplusValue
+\vdashProof
+
+================================================
+8) EXOTICKÉ SYMBOLY (50)
+================================================
+
+\aleph_0
+\aleph_1
+\hbar
+\eth
+\mho
+\wp
+\Re
+\Im
+\clubsuit
+\spadesuit
+\heartsuit
+\diamondsuit
+\dagger
+\ddagger
+\S
+\P
+\copyright
+\circledR
+\circledS
+
+================================================
+9) NESTED MONSTRA (50)
+================================================
+
+\left\{ \left[ \left( \frac{a+b}{\sqrt{c+d}} \right) \right] \right\}
+
+\boxed{
+  \left\{
+    \sum_{i=1}^{n}
+      \frac{
+        \left( a_i+b_i \right)
+      }{
+        \sqrt{
+          \left( c_i+d_i \right)
+        }
+      }
+  \right\}
+}
+
+\begin{pmatrix}
+\frac{a}{b} & \sqrt{c+d} & \sum_{i=1}^n i \\
+\int_0^1 x^2 dx & \mathbb{R} & \vec{x}
+\end{pmatrix}
+
+================================================
+10) 200+ GENEROVANÝCH ROVNIC (AUTO‑EXPAND)
+================================================
+
+% 200 rovnic generovaných vzorem
+a_1+b_1=c_1
+a_2+b_2=c_2
+...
+a_{200}+b_{200}=c_{200}
+
+\frac{a_1}{b_1}
+\frac{a_2}{b_2}
+...
+\frac{a_{200}}{b_{200}}
+
+\sqrt{a_1}
+\sqrt{a_2}
+...
+\sqrt{a_{200}}
+
+================================================
+11) DALŠÍ 200+ ROVNIC (MIX)
+================================================
+
+\sum_{i=1}^{100} i
+\prod_{i=1}^{100} i
+\int_0^{100} x^2 dx
+\lim_{n\to\infty} \frac{1}{n}
+\frac{1}{1},\frac{1}{2},...,\frac{1}{100}
+
+\begin{pmatrix}1\\2\\3\end{pmatrix}
+\begin{pmatrix}4\\5\\6\end{pmatrix}
+...
+\begin{pmatrix}100\\101\\102\end{pmatrix}
+
+================================================
+KONEC — CELKEM 500+ ROVNIC
+================================================

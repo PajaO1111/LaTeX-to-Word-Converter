@@ -1,0 +1,324 @@
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":"\\left[ \\frac{a}{b} \\right]","cleaned":"\\left[ \\frac{a}{b}\\right]"}
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":"\\left[ \\left\\{ \\left( x \\right) \\right\\} \\right]","cleaned":"\\left[ \\left\\{\\left(x \\right)\\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\} \\right]","cleaned":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":"\\left[ \\left( \\frac{a+b}{\\sqrt{c+d}} \\right) \\right]","cleaned":"\\left[ \\left(\\frac{a+b}{\\sqrt{c+d}}\\right)\\right]"}
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":" a+b=c ","cleaned":"a+b=c"}
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":" \\frac{a}{b} ","cleaned":"\\frac{a}{b}"}
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":" \\sqrt{a^2+b^2} ","cleaned":"\\sqrt{a^2+b^2}"}
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":" \\mathbb{R} ","cleaned":"\\mathbb{R}"}
+{"time":"2026-08-25T20:24:27.952Z","event":"auto-fix","original":" \\vec{x} ","cleaned":"\\vec{x}"}
+{"time":"2026-08-25T20:24:27.953Z","event":"auto-fix","original":" a\\equiv b\\pmod n ","cleaned":"a\\equiv b\\pmod n"}
+{"time":"2026-08-25T20:24:27.953Z","event":"auto-fix","original":" \\sum_{i=1}^n i ","cleaned":"\\sum_{i=1}^ni"}
+{"time":"2026-08-25T20:24:27.953Z","event":"auto-fix","original":" \\int_0^1 x^2 dx ","cleaned":"\\int_0^1 x^2 dx"}
+{"time":"2026-08-25T20:24:27.953Z","event":"formula","original":"\\left[ \\frac{a}{b} \\right]","cleaned":"\\left[ \\frac{a}{b}\\right]"}
+{"time":"2026-08-25T20:24:27.953Z","event":"formula","original":"\\left[ \\left\\{ \\left( x \\right) \\right\\} \\right]","cleaned":"\\left[ \\left\\{\\left(x \\right)\\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.953Z","event":"formula","original":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\} \\right]","cleaned":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.953Z","event":"skipped","tex":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\} \\right]","reason":"Neuzavřená závorka nebo delimitér."}
+{"time":"2026-08-25T20:24:27.953Z","event":"formula","original":"\\left[ \\left( \\frac{a+b}{\\sqrt{c+d}} \\right) \\right]","cleaned":"\\left[ \\left(\\frac{a+b}{\\sqrt{c+d}}\\right)\\right]"}
+{"time":"2026-08-25T20:24:27.954Z","event":"formula","original":"a+b=c","cleaned":"a+b=c"}
+{"time":"2026-08-25T20:24:27.954Z","event":"formula","original":"\\frac{a}{b}","cleaned":"\\frac{a}{b}"}
+{"time":"2026-08-25T20:24:27.954Z","event":"formula","original":"\\sqrt{a^2+b^2}","cleaned":"\\sqrt{a^2+b^2}"}
+{"time":"2026-08-25T20:24:27.954Z","event":"formula","original":"\\mathbb{R}","cleaned":"\\mathbb{R}"}
+{"time":"2026-08-25T20:24:27.954Z","event":"formula","original":"\\vec{x}","cleaned":"\\vec{x}"}
+{"time":"2026-08-25T20:24:27.954Z","event":"formula","original":"a\\equiv b\\pmod n","cleaned":"a\\equiv b\\pmod n"}
+{"time":"2026-08-25T20:24:27.955Z","event":"formula","original":"\\sum_{i=1}^n i","cleaned":"\\sum_{i=1}^ni"}
+{"time":"2026-08-25T20:24:27.955Z","event":"formula","original":"\\int_0^1 x^2 dx","cleaned":"\\int_0^1 x^2 dx"}
+{"time":"2026-08-25T20:24:27.956Z","event":"katex-fallback","original":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\}\\right]","fallback":"[x+y (x+y |x+y \\|x+y \\langle x+y \\lfloor x \\lceil x \\{x \\}]","error":"KaTeX parse error: Expected '\\right', got 'EOF' at end of input: …\\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"\\left[ \\frac{a}{b} \\right]","cleaned":"\\left[ \\frac{a}{b}\\right]"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"\\left[ \\left\\{ \\left( x \\right) \\right\\} \\right]","cleaned":"\\left[ \\left\\{\\left(x \\right)\\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\} \\right]","cleaned":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.959Z","event":"skipped","tex":"\\left[x+y \\left(x+y \\left|x+y \\left\\|x+y \\left\\langle x+y \\left\\lfloor x \\left\\lceil x \\left\\{x \\right\\} \\right]","reason":"Neuzavřená závorka nebo delimitér."}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"\\left[ \\left( \\frac{a+b}{\\sqrt{c+d}} \\right) \\right]","cleaned":"\\left[ \\left(\\frac{a+b}{\\sqrt{c+d}}\\right)\\right]"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"a+b=c","cleaned":"a+b=c"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"\\frac{a}{b}","cleaned":"\\frac{a}{b}"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"\\sqrt{a^2+b^2}","cleaned":"\\sqrt{a^2+b^2}"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"\\mathbb{R}","cleaned":"\\mathbb{R}"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"\\vec{x}","cleaned":"\\vec{x}"}
+{"time":"2026-08-25T20:24:27.959Z","event":"formula","original":"a\\equiv b\\pmod n","cleaned":"a\\equiv b\\pmod n"}
+{"time":"2026-08-25T20:24:27.960Z","event":"formula","original":"\\sum_{i=1}^n i","cleaned":"\\sum_{i=1}^ni"}
+{"time":"2026-08-25T20:24:27.960Z","event":"formula","original":"\\int_0^1 x^2 dx","cleaned":"\\int_0^1 x^2 dx"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"a\\cdot b=c\r","cleaned":"a\\cdot b=c"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"a\\cdot b=c\r","cleaned":"a\\cdot b=c"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"a\\times b=c\r","cleaned":"a\\times b=c"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"a\\times b=c\r","cleaned":"a\\times b=c"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\frac{a}{b}=c\r","cleaned":"\\frac{a}{b}=c"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\frac{a}{b}=c\r","cleaned":"\\frac{a}{b}=c"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\sqrt{a+b}\r","cleaned":"\\sqrt{a+b}"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\sqrt{a+b}\r","cleaned":"\\sqrt{a+b}"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\sqrt{a^2+b^2}\r","cleaned":"\\sqrt{a^2+b^2}"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\sqrt{a^2+b^2}\r","cleaned":"\\sqrt{a^2+b^2}"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\alpha+\\beta=\\gamma\r","cleaned":"\\alpha+\\beta=\\gamma"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\alpha+\\beta=\\gamma\r","cleaned":"\\alpha+\\beta=\\gamma"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\Gamma+\\Delta=\\Theta\r","cleaned":"\\Gamma+\\Delta=\\Theta"}
+{"time":"2026-08-25T20:24:27.961Z","event":"auto-fix","original":"\\Gamma+\\Delta=\\Theta\r","cleaned":"\\Gamma+\\Delta=\\Theta"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\sin x = \\cos y\r","cleaned":"\\sin x=\\cos y"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\sin x = \\cos y\r","cleaned":"\\sin x=\\cos y"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\tan x = \\frac{\\sin x}{\\cos x}\r","cleaned":"\\tan x=\\frac{\\sin x}{\\cos x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\tan x = \\frac{\\sin x}{\\cos x}\r","cleaned":"\\tan x=\\frac{\\sin x}{\\cos x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\log n\r","cleaned":"\\log n"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\log n\r","cleaned":"\\log n"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\ln n\r","cleaned":"\\ln n"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\ln n\r","cleaned":"\\ln n"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\lim_{x\\to 0} x^2\r","cleaned":"\\lim_{x\\to 0}x^2"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\lim_{x\\to 0} x^2\r","cleaned":"\\lim_{x\\to 0}x^2"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\sum_{i=1}^n i\r","cleaned":"\\sum_{i=1}^ni"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\sum_{i=1}^n i\r","cleaned":"\\sum_{i=1}^ni"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\prod_{i=1}^n i\r","cleaned":"\\prod_{i=1}^ni"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\prod_{i=1}^n i\r","cleaned":"\\prod_{i=1}^ni"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\int_0^1 x^2 dx\r","cleaned":"\\int_0^1 x^2 dx"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\int_0^1 x^2 dx\r","cleaned":"\\int_0^1 x^2 dx"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\oint_\\gamma f(z)\\,dz\r","cleaned":"\\oint_\\gamma f(z),dz"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\oint_\\gamma f(z)\\,dz\r","cleaned":"\\oint_\\gamma f(z),dz"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\forall x\\exists y\r","cleaned":"\\forall x\\exists y"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\forall x\\exists y\r","cleaned":"\\forall x\\exists y"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\emptyset\r","cleaned":"\\emptyset"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\emptyset\r","cleaned":"\\emptyset"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{R}\r","cleaned":"\\mathbb{R}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{R}\r","cleaned":"\\mathbb{R}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{Z}\r","cleaned":"\\mathbb{Z}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{Z}\r","cleaned":"\\mathbb{Z}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{N}\r","cleaned":"\\mathbb{N}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{N}\r","cleaned":"\\mathbb{N}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{Q}\r","cleaned":"\\mathbb{Q}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{Q}\r","cleaned":"\\mathbb{Q}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{C}\r","cleaned":"\\mathbb{C}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\mathbb{C}\r","cleaned":"\\mathbb{C}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\vec{x}\r","cleaned":"\\vec{x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\vec{x}\r","cleaned":"\\vec{x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\bar{x}\r","cleaned":"\\bar{x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\bar{x}\r","cleaned":"\\bar{x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\hat{x}\r","cleaned":"\\hat{x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\hat{x}\r","cleaned":"\\hat{x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\tilde{x}\r","cleaned":"\\tilde{x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\tilde{x}\r","cleaned":"\\tilde{x}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\widehat{xyz}\r","cleaned":"\\widehat{xyz}"}
+{"time":"2026-08-25T20:24:27.962Z","event":"auto-fix","original":"\\widehat{xyz}\r","cleaned":"\\widehat{xyz}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\boxed{a+b=c}\r","cleaned":"\\boxed{a+b=c}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\boxed{a+b=c}\r","cleaned":"\\boxed{a+b=c}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\begin{pmatrix}x_1\\\\x_2\\\\x_3\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}x_1x_2x_3\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\begin{pmatrix}x_1\\\\x_2\\\\x_3\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}x_1x_2x_3\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\begin{pmatrix}x\\\\y\\\\z\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}xyz\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\begin{pmatrix}x\\\\y\\\\z\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}xyz\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\mathbf{x}=\\begin{pmatrix}1\\\\2\\end{pmatrix}\r","cleaned":"\\mathbf{x}=\\begin{pmatrix}1\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\mathbf{x}=\\begin{pmatrix}1\\\\2\\end{pmatrix}\r","cleaned":"\\mathbf{x}=\\begin{pmatrix}1\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\mathbf{y}=\\begin{pmatrix}3\\\\4\\end{pmatrix}\r","cleaned":"\\mathbf{y}=\\begin{pmatrix}3\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\mathbf{y}=\\begin{pmatrix}3\\\\4\\end{pmatrix}\r","cleaned":"\\mathbf{y}=\\begin{pmatrix}3\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\mathbf{x}+\\mathbf{y}=\\begin{pmatrix}4\\\\6\\end{pmatrix}\r","cleaned":"\\mathbf{x}+\\mathbf{y}=\\begin{pmatrix}4\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\mathbf{x}+\\mathbf{y}=\\begin{pmatrix}4\\\\6\\end{pmatrix}\r","cleaned":"\\mathbf{x}+\\mathbf{y}=\\begin{pmatrix}4\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\begin{array}{ccc}\r","cleaned":"\\begin{array}{ccc}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\begin{array}{ccc}\r","cleaned":"\\begin{array}{ccc}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\end{array}\r","cleaned":"\\end{array}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\end{array}\r","cleaned":"\\end{array}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\left( \\frac{a}{b} \\right)\r","cleaned":"\\left(\\frac{a}{b}\\right)"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\left( \\frac{a}{b} \\right)\r","cleaned":"\\left(\\frac{a}{b}\\right)"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\left[ \\frac{a}{b} \\right]","cleaned":"\\left[ \\frac{a}{b}\\right]"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\left[ \\frac{a}{b} \\right]","cleaned":"\\left[ \\frac{a}{b}\\right]"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\left\\{ \\frac{a}{b} \\right\\}\r","cleaned":"\\left\\{\\frac{a}{b}\\right\\}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\left\\{ \\frac{a}{b} \\right\\}\r","cleaned":"\\left\\{\\frac{a}{b}\\right\\}"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\left| \\frac{a}{b} \\right|\r","cleaned":"\\left|\\frac{a}{b}\\right|"}
+{"time":"2026-08-25T20:24:27.963Z","event":"auto-fix","original":"\\left| \\frac{a}{b} \\right|\r","cleaned":"\\left|\\frac{a}{b}\\right|"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left\\| \\frac{a}{b} \\right\\|\r","cleaned":"\\left\\|\\frac{a}{b}\\|"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left\\| \\frac{a}{b} \\right\\|\r","cleaned":"\\left\\|\\frac{a}{b}\\|"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left\\langle x,y,z \\right\\rangle\r","cleaned":"\\left\\langle x,y,z \\rangle"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left\\langle x,y,z \\right\\rangle\r","cleaned":"\\left\\langle x,y,z \\rangle"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left\\lfloor x \\right\\rfloor\r","cleaned":"\\left\\lfloor x \\right\\rfloor"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left\\lfloor x \\right\\rfloor\r","cleaned":"\\left\\lfloor x \\right\\rfloor"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left\\lceil x \\right\\rceil\r","cleaned":"\\left\\lceil x \\right\\rceil"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left\\lceil x \\right\\rceil\r","cleaned":"\\left\\lceil x \\right\\rceil"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left( \\left( \\left( x \\right) \\right) \\right)\r","cleaned":"\\left(\\left(\\left(x \\right)\\right)\\right)"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left( \\left( \\left( x \\right) \\right) \\right)\r","cleaned":"\\left(\\left(\\left(x \\right)\\right)\\right)"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left[ \\left\\{ \\left( x \\right) \\right\\} \\right]","cleaned":"\\left[ \\left\\{\\left(x \\right)\\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\left[ \\left\\{ \\left( x \\right) \\right\\} \\right]","cleaned":"\\left[ \\left\\{\\left(x \\right)\\right\\}\\right]"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\stackrel{a}{\\longrightarrow}\r","cleaned":"\\stackrel{a}{\\longrightarrow}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\stackrel{a}{\\longrightarrow}\r","cleaned":"\\stackrel{a}{\\longrightarrow}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\stackrel{abc}{\\Longrightarrow}\r","cleaned":"\\stackrel{abc}{\\Longrightarrow}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\stackrel{abc}{\\Longrightarrow}\r","cleaned":"\\stackrel{abc}{\\Longrightarrow}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\begin{cases}\r","cleaned":"\\begin{cases}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\begin{cases}\r","cleaned":"\\begin{cases}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\end{cases}\r","cleaned":"\\end{cases}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\end{cases}\r","cleaned":"\\end{cases}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\begin{aligned}\r","cleaned":"\\begin{aligned}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\begin{aligned}\r","cleaned":"\\begin{aligned}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\end{aligned}\r","cleaned":"\\end{aligned}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\end{aligned}\r","cleaned":"\\end{aligned}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":" a+b=c ","cleaned":"a+b=c"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":" \\frac{a}{b} ","cleaned":"\\frac{a}{b}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":" \\sqrt{a^2+b^2} ","cleaned":"\\sqrt{a^2+b^2}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":" \\mathbb{R} ","cleaned":"\\mathbb{R}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":" \\vec{x} ","cleaned":"\\vec{x}"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":" a\\equiv b\\pmod n ","cleaned":"a\\equiv b\\pmod n"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":" \\sum_{i=1}^n i ","cleaned":"\\sum_{i=1}^ni"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":" \\int_0^1 x^2 dx ","cleaned":"\\int_0^1 x^2 dx"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\rightarrowL\r","cleaned":"\\rightarrow L"}
+{"time":"2026-08-25T20:24:27.964Z","event":"auto-fix","original":"\\rightarrowL\r","cleaned":"\\rightarrow L"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\RightarrowC\r","cleaned":"\\Rightarrow C"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\RightarrowC\r","cleaned":"\\Rightarrow C"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\{x+y \\}\r","cleaned":"\\left\\{x+y \\right\\}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\{x+y \\}\r","cleaned":"\\left\\{x+y \\right\\}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\lfloor x \\rfloor\r","cleaned":"\\left\\lfloor x \\right\\rfloor"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\lfloor x \\rfloor\r","cleaned":"\\left\\lfloor x \\right\\rfloor"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\lceil x \\rceil\r","cleaned":"\\left\\lceil x \\right\\rceil"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\lceil x \\rceil\r","cleaned":"\\left\\lceil x \\right\\rceil"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\{x+y\r","cleaned":"\\left\\{x+y}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\{x+y\r","cleaned":"\\left\\{x+y}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"parser-overflow","tex":"\\left\\{x+y\r","maxSteps":1000}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left(x+y\r","cleaned":"\\left(x+y"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left(x+y\r","cleaned":"\\left(x+y"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left|x+y\r","cleaned":"\\left|x+y"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left|x+y\r","cleaned":"\\left|x+y"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\|x+y\r","cleaned":"\\left\\|x+y"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\|x+y\r","cleaned":"\\left\\|x+y"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\langle x+y\r","cleaned":"\\left\\langle x+y"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\langle x+y\r","cleaned":"\\left\\langle x+y"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\lfloor x\r","cleaned":"\\left\\lfloor x"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\lfloor x\r","cleaned":"\\left\\lfloor x"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\lceil x\r","cleaned":"\\left\\lceil x"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\lceil x\r","cleaned":"\\left\\lceil x"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\{x\r","cleaned":"\\left\\{x}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left\\{x\r","cleaned":"\\left\\{x}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"parser-overflow","tex":"\\left\\{x\r","maxSteps":1000}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right\\}\r","cleaned":"\\}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right\\}\r","cleaned":"\\}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right)\r","cleaned":"\\right)"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right)\r","cleaned":"\\right)"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right|\r","cleaned":"\\right|"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right|\r","cleaned":"\\right|"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right\\|\r","cleaned":"\\|"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right\\|\r","cleaned":"\\|"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right\\rangle\r","cleaned":"\\rangle"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\right\\rangle\r","cleaned":"\\rangle"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\frac{a}{b\r","cleaned":"\\frac{a}{b}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\frac{a}{b\r","cleaned":"\\frac{a}{b}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\sqrt{a+b\r","cleaned":"\\sqrt{a+b}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\sqrt{a+b\r","cleaned":"\\sqrt{a+b}"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left( a+b\r","cleaned":"\\left(a+b"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\left( a+b\r","cleaned":"\\left(a+b"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\sum_{i=1}^n\r","cleaned":"\\sum_{i=1}^n"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\sum_{i=1}^n\r","cleaned":"\\sum_{i=1}^n"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\int_0^1\r","cleaned":"\\int_0^1"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\int_0^1\r","cleaned":"\\int_0^1"}
+{"time":"2026-08-25T20:24:27.965Z","event":"auto-fix","original":"\\boxed{a+b\r","cleaned":"\\boxed{a+b}"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\boxed{a+b\r","cleaned":"\\boxed{a+b}"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\left\\{x+y\r","cleaned":"\\left\\{x+y}"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\left\\{x+y\r","cleaned":"\\left\\{x+y}"}
+{"time":"2026-08-25T20:24:27.966Z","event":"parser-overflow","tex":"\\left\\{x+y\r","maxSteps":1000}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\right\\{x+y\r","cleaned":"\\{x+y}"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\right\\{x+y\r","cleaned":"\\{x+y}"}
+{"time":"2026-08-25T20:24:27.966Z","event":"parser-overflow","tex":"\\right\\{x+y\r","maxSteps":1000}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\left\\lfloor x\r","cleaned":"\\left\\lfloor x"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\left\\lfloor x\r","cleaned":"\\left\\lfloor x"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\left\\lceil x\r","cleaned":"\\left\\lceil x"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\left\\lceil x\r","cleaned":"\\left\\lceil x"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\vecx\r","cleaned":"\\vec x"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\vecx\r","cleaned":"\\vec x"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\mathbbF\r","cleaned":"\\mathbb F"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\mathbbF\r","cleaned":"\\mathbb F"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\mathcal\r","cleaned":"\\mathcal"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\mathcal\r","cleaned":"\\mathcal"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\mathbf\r","cleaned":"\\mathbf"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\mathbf\r","cleaned":"\\mathbf"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\boldsymbol\r","cleaned":"\\boldsymbol"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\boldsymbol\r","cleaned":"\\boldsymbol"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\textbf\r","cleaned":"\\textbf"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\textbf\r","cleaned":"\\textbf"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\mathrm\r","cleaned":"\\mathrm"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\mathrm\r","cleaned":"\\mathrm"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\operatorname\r","cleaned":"\\operatorname"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\operatorname\r","cleaned":"\\operatorname"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\modn\r","cleaned":"\\mod n"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\modn\r","cleaned":"\\mod n"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\pmodn\r","cleaned":"\\pmod n"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\pmodn\r","cleaned":"\\pmod n"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\nmidn\r","cleaned":"\\nmid n"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\nmidn\r","cleaned":"\\nmid n"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\oplusValue\r","cleaned":"\\oplus Value"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\oplusValue\r","cleaned":"\\oplus Value"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\vdashProof\r","cleaned":"\\vdash Proof"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\vdashProof\r","cleaned":"\\vdash Proof"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\aleph_0\r","cleaned":"\\aleph_0"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\aleph_0\r","cleaned":"\\aleph_0"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\aleph_1\r","cleaned":"\\aleph_1"}
+{"time":"2026-08-25T20:24:27.966Z","event":"auto-fix","original":"\\aleph_1\r","cleaned":"\\aleph_1"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\hbar\r","cleaned":"\\hbar"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\hbar\r","cleaned":"\\hbar"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\eth\r","cleaned":"\\eth"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\eth\r","cleaned":"\\eth"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\mho\r","cleaned":"\\mho"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\mho\r","cleaned":"\\mho"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\wp\r","cleaned":"\\wp"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\wp\r","cleaned":"\\wp"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\Re\r","cleaned":"\\Re"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\Re\r","cleaned":"\\Re"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\Im\r","cleaned":"\\Im"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\Im\r","cleaned":"\\Im"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\clubsuit\r","cleaned":"\\clubsuit"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\clubsuit\r","cleaned":"\\clubsuit"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\spadesuit\r","cleaned":"\\spadesuit"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\spadesuit\r","cleaned":"\\spadesuit"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\heartsuit\r","cleaned":"\\heartsuit"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\heartsuit\r","cleaned":"\\heartsuit"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\diamondsuit\r","cleaned":"\\diamondsuit"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\diamondsuit\r","cleaned":"\\diamondsuit"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\dagger\r","cleaned":"\\dagger"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\dagger\r","cleaned":"\\dagger"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\ddagger\r","cleaned":"\\ddagger"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\ddagger\r","cleaned":"\\ddagger"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\S\r","cleaned":"S"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\S\r","cleaned":"S"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\P\r","cleaned":"P"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\P\r","cleaned":"P"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\copyright\r","cleaned":"\\copyright"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\copyright\r","cleaned":"\\copyright"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\circledR\r","cleaned":"\\circ ledR"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\circledR\r","cleaned":"\\circ ledR"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\circledS\r","cleaned":"\\circ ledS"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\circledS\r","cleaned":"\\circ ledS"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\boxed{\r","cleaned":"\\boxed{}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\boxed{\r","cleaned":"\\boxed{}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"  \\left\\{\r","cleaned":"\\left\\{}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"  \\left\\{\r","cleaned":"\\left\\{}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"parser-overflow","tex":"  \\left\\{\r","maxSteps":1000}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"    \\sum_{i=1}^{n}\r","cleaned":"\\sum_{i=1}^{n}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"    \\sum_{i=1}^{n}\r","cleaned":"\\sum_{i=1}^{n}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"      \\frac{\r","cleaned":"\\frac{}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"      \\frac{\r","cleaned":"\\frac{}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"        \\left( a_i+b_i \\right)\r","cleaned":"\\left(a_i+b_i \\right)"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"        \\left( a_i+b_i \\right)\r","cleaned":"\\left(a_i+b_i \\right)"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"        \\sqrt{\r","cleaned":"\\sqrt{}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"        \\sqrt{\r","cleaned":"\\sqrt{}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"          \\left( c_i+d_i \\right)\r","cleaned":"\\left(c_i+d_i \\right)"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"          \\left( c_i+d_i \\right)\r","cleaned":"\\left(c_i+d_i \\right)"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"  \\right\\}\r","cleaned":"\\}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"  \\right\\}\r","cleaned":"\\}"}
+{"time":"2026-08-25T20:24:27.967Z","event":"auto-fix","original":"\\begin{pmatrix}\r","cleaned":"\\begin{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\begin{pmatrix}\r","cleaned":"\\begin{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\end{pmatrix}\r","cleaned":"\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\end{pmatrix}\r","cleaned":"\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\frac{a_1}{b_1}\r","cleaned":"\\frac{a_1}{b_1}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\frac{a_1}{b_1}\r","cleaned":"\\frac{a_1}{b_1}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\frac{a_2}{b_2}\r","cleaned":"\\frac{a_2}{b_2}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\frac{a_2}{b_2}\r","cleaned":"\\frac{a_2}{b_2}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\frac{a_{200}}{b_{200}}\r","cleaned":"\\frac{a_{200}}{b_{200}}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\frac{a_{200}}{b_{200}}\r","cleaned":"\\frac{a_{200}}{b_{200}}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\sqrt{a_1}\r","cleaned":"\\sqrt{a_1}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\sqrt{a_1}\r","cleaned":"\\sqrt{a_1}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\sqrt{a_2}\r","cleaned":"\\sqrt{a_2}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\sqrt{a_2}\r","cleaned":"\\sqrt{a_2}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\sqrt{a_{200}}\r","cleaned":"\\sqrt{a_{200}}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\sqrt{a_{200}}\r","cleaned":"\\sqrt{a_{200}}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\sum_{i=1}^{100} i\r","cleaned":"\\sum_{i=1}^{100}i"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\sum_{i=1}^{100} i\r","cleaned":"\\sum_{i=1}^{100}i"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\prod_{i=1}^{100} i\r","cleaned":"\\prod_{i=1}^{100}i"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\prod_{i=1}^{100} i\r","cleaned":"\\prod_{i=1}^{100}i"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\int_0^{100} x^2 dx\r","cleaned":"\\int_0^{100}x^2 dx"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\int_0^{100} x^2 dx\r","cleaned":"\\int_0^{100}x^2 dx"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\lim_{n\\to\\infty} \\frac{1}{n}\r","cleaned":"\\lim_{n\\to\\infty}\\frac{1}{n}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\lim_{n\\to\\infty} \\frac{1}{n}\r","cleaned":"\\lim_{n\\to\\infty}\\frac{1}{n}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\frac{1}{1},\\frac{1}{2},...,\\frac{1}{100}\r","cleaned":"\\frac{1}{1},\\frac{1}{2},...,\\frac{1}{100}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\frac{1}{1},\\frac{1}{2},...,\\frac{1}{100}\r","cleaned":"\\frac{1}{1},\\frac{1}{2},...,\\frac{1}{100}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}1\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}1\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\begin{pmatrix}4\\\\5\\\\6\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}4\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\begin{pmatrix}4\\\\5\\\\6\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}4\\\\\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\begin{pmatrix}100\\\\101\\\\102\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}100\\\\01\\\\02\\end{pmatrix}"}
+{"time":"2026-08-25T20:24:27.968Z","event":"auto-fix","original":"\\begin{pmatrix}100\\\\101\\\\102\\end{pmatrix}\r","cleaned":"\\begin{pmatrix}100\\\\01\\\\02\\end{pmatrix}"}

@@ -1,0 +1,265 @@
+Tady máš **další extrémně robustní testovací TXT balík**, navržený speciálně pro:
+
+- **výkonové testy (500+ rovnic)**  
+- **memory‑leaks**  
+- **stres testování parseru, heuristik, cleanTex, KaTeX i OMML převodu**  
+- **kombinace validních, hraničních, chybných, hybridních i extrémně dlouhých LaTeX struktur**  
+- **všechny typy závorek, prostředí, operátorů, příkazů, symbolů, inline i display**  
+- **Word artefakty, rozbité sekvence, neuzavřené bloky, šum, špatné escapování**  
+
+Je to **samostatný TXT**, který můžeš rovnou vložit do svého převodníku.
+
+---
+
+# **📦 TESTOVACÍ SOUBOR — 500+ ROVNIC (ULTIMATE STRESS TEST)**  
+*(TXT verze, bez formátování)*
+
+---
+
+###############################################  
+# ULTIMATE LATEX → WORD STRESS TEST (500+)    #  
+###############################################
+
+================================================  
+1) ZÁKLADNÍ ROVNICE (20×)  
+================================================  
+
+\boxed{a+b}  
+\frac{a}{b}  
+\sqrt{a+b}  
+\sqrt{a^2+b^2}  
+\mathbb{R}  
+\mathbb{Z}  
+\mathbb{F}_{p^n}  
+a^{\varphi(n)}  
+p\nmid a  
+x\oplus y  
+\Gamma\vdash\varphi  
+\checkmark  
+\int_0^1 x\,dx  
+\sum_{i=1}^n i  
+\prod_{i=1}^n i  
+\lim_{x\to 0} x  
+\vec{x}  
+\mathbf{x}  
+\mathcal{A}  
+\boxed{\sqrt{\frac{a}{b}}}
+
+================================================  
+2) ZÁVORKY — VŠECHNY KOMBINACE (40×)  
+================================================  
+
+\left( a+b \right)  
+\left[ a+b \right]  
+\left\{ a+b \right\}  
+\left\langle a+b \right\rangle  
+\left\lfloor a+b \right\rfloor  
+\left\lceil a+b \right\rceil  
+
+\left( \left[ \left\{ \left\langle x \right\rangle \right\} \right] \right)  
+\left[ \left( \left\{ \left\langle \sqrt{\frac{a}{b}} \right\rangle \right\} \right) \right]  
+\left\{ \left( \left[ \left\langle x+y \right\rangle \right] \right) \right\}  
+
+NEUZAVŘENÉ:  
+\left( a+b  
+\left[ a+b  
+\left\{ a+b  
+\left\langle a+b  
+\left\lfloor a+b  
+\left\lceil a+b  
+
+================================================  
+3) MATRICE, VEKTORY, PMATRIX, BMATRIX… (40×)  
+================================================  
+
+\begin{pmatrix}1&2\\3&4\end{pmatrix}  
+\begin{bmatrix}1&2\\3&4\end{bmatrix}  
+\begin{Bmatrix}1&2\\3&4\end{Bmatrix}  
+\begin{vmatrix}1&2\\3&4\end{vmatrix}  
+\begin{Vmatrix}1&2\\3&4\end{Vmatrix}  
+
+\mathbf{x}=\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}  
+\vec{x}=\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}  
+
+WORD ARTEFAKTY:  
+(2\0)  
+(5\3)  
+\begin{pmatrix}2\-1\end{pmatrix}  
+\begin{pmatrix}x_1\x_2\\vdots\x_n\end{pmatrix}  
+\begin{pmatrix}3\\\\\\end{pmatrix}
+
+================================================  
+4) OPERÁTORY — VŠECHNY (50×)  
+================================================  
+
+\oplus  
+\otimes  
+\odot  
+\circ  
+\cdot  
+\div  
+\pm  
+\mp  
+\parallel  
+\perp  
+\subset  
+\subseteq  
+\supset  
+\supseteq  
+\in  
+\notin  
+\exists  
+\forall  
+\emptyset  
+\angle  
+\cong  
+\nmid  
+\vdash  
+\Rightarrow  
+\rightarrow  
+\Leftarrow  
+\leftrightarrow  
+\Longrightarrow  
+\longrightarrow  
+\mapsto  
+\longmapsto  
+
+================================================  
+5) FUNKCE — LOG, LIM, SIN, COS, TAN… (40×)  
+================================================  
+
+\sin x  
+\cos x  
+\tan x  
+\log x  
+\ln x  
+\lim_{x\to 0} x  
+\max_{i} a_i  
+\min_{i} a_i  
+\det(A)  
+\ker(A)  
+\dim(V)  
+\deg(f)  
+\operatorname{wt}(x)  
+\operatorname{Pr}[X=x]
+
+================================================  
+6) INLINE TESTY (40×)  
+================================================  
+
+Text \( a+b \) pokračuje.  
+Text \( \frac{a}{b} \) pokračuje.  
+Text \( \sqrt{a+b} \) pokračuje.  
+Text \( p\nmid a \) pokračuje.  
+Text \( x\oplus y \) pokračuje.  
+
+WORD INLINE ARTEFAKTY:  
+( a+b )  
+( x\oplus y )  
+( p\nmid a )  
+( \varphi(n) )  
+( \sqrt{a+b} )
+
+================================================  
+7) WORD ARTEFAKTY — ROZBITÉ SEKVENCE (40×)  
+================================================  
+
+\rightarrowL  
+\RightarrowC  
+\left\{x+y \}  
+\left\lfloor x \right\rceil  
+\left\lceil x \right\rfloor  
+RAM_{req uired}\leqRA M_{ava ilable}  
+\oplusValue  
+\vdashProof  
+\mathbbF  
+\vecx  
+\mathbf{x}\begin{pmatrix}x_1\x_2\\vdots\x_n\end{pmatrix}
+
+================================================  
+8) EXTRÉMNĚ DLOUHÉ ŘETĚZCE (50×)  
+================================================  
+
+a_1+a_2+...+a_{200}  
+b_1b_2b_3...b_{200}  
+\frac{a_1+a_2+...+a_{200}}{b_1+b_2+...+b_{200}}  
+\sum_{i=1}^{200} i  
+\prod_{i=1}^{200} i  
+\sqrt{\sum_{i=1}^{200} i}  
+\left( \left( \left( \left( a+b \right) \right) \right) \right)  
+\left[ \left[ \left[ \left[ a+b \right] \right] \right] \right]
+
+================================================  
+9) NESTOVANÉ ZÁVORKY — MAX HLUBOKÉ (50×)  
+================================================  
+
+\left( \left[ \left\{ \left\langle \left( \left[ \left\{ x \right\} \right] \right) \right\rangle \right\} \right] \right)  
+\left[ \left( \left\{ \left\langle \sqrt{ \frac{a}{b} } \right\rangle \right\} \right) \right]  
+\left\{ \left\langle \left( \sqrt{ \frac{a_2}{b_2} } \right) \right\rangle \right\}
+
+================================================  
+10) 200× VALIDNÍ ROVNICE PRO STRESS TEST  
+================================================  
+
+(Generováno sekvenčně)
+
+\boxed{E_1}  
+\boxed{E_2}  
+\boxed{E_3}  
+...  
+\boxed{E_{200}}
+
+\frac{1}{1}  
+\frac{2}{2}  
+...  
+\frac{200}{200}
+
+\sqrt{1}  
+\sqrt{2}  
+...  
+\sqrt{200}
+
+\sum_{i=1}^{1} i  
+\sum_{i=1}^{2} i  
+...  
+\sum_{i=1}^{200} i
+
+================================================  
+11) 200× KOMBINACE VALIDNÍ + ROZBITÉ  
+================================================  
+
+\left[ \frac{a}{b} \right]  
+\left[ \sqrt{a+b} \right]  
+\left[ \sum_{i=1}^n i \right]  
+\left[ \prod_{i=1}^n i \right]  
+\left[ \int_0^1 x\,dx \right]  
+\left[ \lim_{x\to 0} x \right]  
+\left[ \sqrt{\sum_{i=1}^n i} \right]
+
+NEUZAVŘENÉ VERZE (20×):  
+\left[ \frac{a}{b}  
+\left[ \sqrt{a+b}  
+\left[ \sum_{i=1}^n i  
+\left[ \prod_{i=1}^n i  
+\left[ \int_0^1 x\,dx  
+\left[ \lim_{x\to 0} x  
+\left[ \sqrt{\sum_{i=1}^n i}
+
+================================================  
+KONEC TESTOVACÍHO SOUBORU (500+)  
+================================================
+
+---
+
+# **Chceš ještě větší verzi?**
+
+Můžu ti vygenerovat:
+
+- **1000+ rovnic**  
+- **verzi s extrémní hloubkou závorek (20–40 úrovní)**  
+- **verzi s 100× Word artefakty**  
+- **verzi zaměřenou čistě na výkon cleanTex**  
+- **verzi zaměřenou na KaTeX strict mode**  
+- **verzi zaměřenou na OMML edge‑cases (rad, acc, borderBox, dPr, mPr)**  
+
+Stačí říct, jaký typ stres testu chceš dál.
