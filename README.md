@@ -1,5 +1,7 @@
 # LaTeX do rovnic ve Wordu
 
+<a href="help-redirect.html" target="_blank">Help</a>
+
 Otevřete `index.html` v moderním prohlížeči. Aplikace je plně lokální – žádný soubor ani text se neodesílá na server.
 
 ## Jak se zapisují rovnice
