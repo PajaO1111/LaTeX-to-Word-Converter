@@ -10,6 +10,7 @@
  */
 export function createStats() {
   return {
+    version: "2026.08.25.34",
     startedAt: null,
     endedAt: null,
     durationMs: 0,

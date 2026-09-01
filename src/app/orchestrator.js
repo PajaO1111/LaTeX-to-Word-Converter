@@ -147,19 +147,32 @@ export async function processDocument(sourceText, options = {}) {
     }
   }
 
-  // Finalizace statistik
-  const debugLog = getDebugLog();
-  finalizeStats(stats, debugLog);
-
   // Oddělení OK a problematických formulí
   const okFormulas = allResults.filter((r) => r.status === "fixed" || r.status === "valid");
   const problems = allResults.filter((r) => r.status === "invalid");
 
   // Konverze na OMML
-  const ommlFormulas = okFormulas.map((formula) => ({
-    ...formula,
-    omml: texToOmml(formula.cleanedTex),
-  }));
+  const ommlFormulas = okFormulas.map((formula) => {
+    const cleanedForOmml = formula.cleanedTex || formula.originalTex || "";
+    const ommlResult = cleanedForOmml ? texToOmml(cleanedForOmml) : "";
+    
+    if (ommlResult) {
+      debug("omml-generated", {
+        formula: cleanedForOmml.substring(0, 50),
+        omml: ommlResult.substring(0, 50),
+      });
+    } else {
+      debug("omml-failed", {
+        formula: cleanedForOmml.substring(0, 50),
+        reason: "Empty result from texToOmml",
+      });
+    }
+    
+    return {
+      ...formula,
+      omml: ommlResult,
+    };
+  });
 
   // Finalizace
   stats.endedAt = new Date().toISOString();
@@ -172,10 +185,15 @@ export async function processDocument(sourceText, options = {}) {
     errorCount: problems.length,
   });
 
+  // Finalizace statistik - MUSÍ BÝT PO POSLEDNÍM DEBUG CALL
+  const debugLog = getDebugLog();
+  finalizeStats(stats, debugLog);
+  stats.debugLog = debugLog;
+
   return {
     stats,
     formulas: allResults,
-    okFormulas,
+    okFormulas: ommlFormulas,
     problems,
     debugLog,
   };

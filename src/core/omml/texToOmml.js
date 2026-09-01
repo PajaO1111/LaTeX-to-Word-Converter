@@ -40,8 +40,10 @@ export function texToOmml(tex) {
 
   // Pokud neobsahuje OMML značky, zabal do m:oMath
   if (!result.includes("<m:")) {
-    result = `<m:oMath>${mathRun(result)}</m:oMath>`;
+    // LaTeX string zabal jako text v rovnici
+    result = `<m:oMath>${mathRun(result, "roman")}</m:oMath>`;
   } else if (!result.includes("<m:oMath>")) {
+    // Už má značky, jen zabal do m:oMath
     result = `<m:oMath>${result}</m:oMath>`;
   }
 
