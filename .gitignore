@@ -1,2 +1,4 @@
 *.md
+*.docx
 ! README.md
+! src/README.md
