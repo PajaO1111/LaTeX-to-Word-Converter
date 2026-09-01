@@ -1,0 +1,32 @@
+{
+  "name": "latex-to-word-converter",
+  "version": "2026.08.25.34",
+  "description": "Convert LaTeX formulas to Word OMML equations",
+  "type": "module",
+  "main": "src/app/app.js",
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix",
+    "format": "prettier --write \"src/**/*.js\" \"tests/**/*.js\"",
+    "build": "echo 'Build step - ready for bundling'",
+    "dev": "node --watch src/app/app.js"
+  },
+  "keywords": [
+    "latex",
+    "word",
+    "omml",
+    "converter",
+    "math"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {}
+}
