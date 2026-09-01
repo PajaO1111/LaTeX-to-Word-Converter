@@ -20,6 +20,9 @@ export default [
         fetch: "readonly",
         setTimeout: "readonly",
         requestAnimationFrame: "readonly",
+        localStorage: "readonly",
+        URL: "readonly",
+        Blob: "readonly",
       },
     },
     rules: {
@@ -56,6 +59,9 @@ export default [
         fetch: "readonly",
         setTimeout: "readonly",
         requestAnimationFrame: "readonly",
+        localStorage: "readonly",
+        URL: "readonly",
+        Blob: "readonly",
       },
     },
     rules: {
