@@ -6,7 +6,7 @@
 
 import { escapeXml } from "../utils/escapeXml.js";
 
-const M = "http://schemas.openxmlformats.org/officeDocument/2006/math";
+const _M = "http://schemas.openxmlformats.org/officeDocument/2006/math";
 
 /**
  * Vytvoří matematický běh (text v rovnici)
@@ -38,7 +38,7 @@ export function mathRun(text, variant = "") {
  * @returns {string} Word XML pro běh
  */
 export function wordRun(text, style = {}) {
-  const W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
+  const _W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
   const attrs = /^\s|\s$/.test(text) ? ' xml:space="preserve"' : "";
   const rPr =
     style.bold || style.italic || style.underline
@@ -47,10 +47,7 @@ export function wordRun(text, style = {}) {
 
   return String(text)
     .split(/\n/)
-    .map(
-      (line, index) =>
-        `${index ? "<w:br/>" : ""}<w:t${attrs}>${escapeXml(line)}</w:t>`,
-    )
+    .map((line, index) => `${index ? "<w:br/>" : ""}<w:t${attrs}>${escapeXml(line)}</w:t>`)
     .join("")
     .replace(/^/, `<w:r>${rPr}`)
     .replace(/$/, "</w:r>");

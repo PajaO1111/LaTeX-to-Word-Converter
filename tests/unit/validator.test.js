@@ -3,7 +3,11 @@
  * Unit testy pro validator modul.
  */
 
-import { validateLatexStructure, validateFormula } from "../src/core/latex/validator.js";
+import {
+  validateLatexStructure,
+  validateFormula,
+  _validateFormulaWithFallback,
+} from "../../src/core/latex/validator.js";
 
 describe("validateLatexStructure", () => {
   test("should accept valid LaTeX", () => {

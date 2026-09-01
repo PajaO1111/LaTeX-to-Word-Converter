@@ -81,10 +81,9 @@ export function renderPreview(formulas, container, debugFn = () => {}) {
           } else {
             formulaDiv.textContent = fallback;
           }
-        } catch (_) {
+        } catch {
           card.classList.add("error");
-          formulaDiv.textContent =
-            "KaTeX tento zápis nevyhodnotil: " + error.message;
+          formulaDiv.textContent = "KaTeX tento zápis nevyhodnotil: " + error.message;
         }
       }
 

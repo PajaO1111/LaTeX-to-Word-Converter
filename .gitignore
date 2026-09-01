@@ -1,4 +1,9 @@
 *.md
 *.docx
+node_modules/
+.DS_Store
+dist/
+build/
+.env.local
 ! README.md
 ! src/README.md

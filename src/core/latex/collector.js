@@ -24,18 +24,17 @@ function isStandaloneTex(text) {
   return (
     /\\[A-Za-z]/.test(trimmed) &&
     /^[A-Za-z0-9_{}[\]^=+.,;|()&<>\\\-\s]+$/.test(trimmed) &&
-    (/^[-+\\]/.test(trimmed) ||
-      /[=_^+]/.test(trimmed) ||
-      /\\begin\{|\\mathbf\b/.test(trimmed))
+    (/^[-+\\]/.test(trimmed) || /[=_^+]/.test(trimmed) || /\\begin\{|\\mathbf\b/.test(trimmed))
   );
 }
 
 /**
- * Vrátí vyvážené čtvercové závorky
+ * Vrátí vyvážené čtvercové závorky (privátní pomocná funkce)
+ * @private
  * @param {string} text - text k analýze
  * @returns {string|null} vnitřek zálomek nebo null
  */
-function balancedSquareBlock(text) {
+function _balancedSquareBlock(text) {
   const source = String(text || "").trim();
 
   if (!source.startsWith("[") || !source.endsWith("]")) return null;
@@ -86,12 +85,7 @@ function squareBlocks(text) {
       if (index - start > maxBlockLength) break;
 
       const lineStart = index === 0 || source[index - 1] === "\n";
-      if (
-        lineStart &&
-        /(?:^#{1,6}\s|^={4,}|^[-_]{4,})/.test(
-          source.slice(index).split("\n", 1)[0],
-        )
-      )
+      if (lineStart && /(?:^#{1,6}\s|^={4,}|^[-_]{4,})/.test(source.slice(index).split("\n", 1)[0]))
         break;
 
       if (source.startsWith("\\left[", index)) {
@@ -108,8 +102,7 @@ function squareBlocks(text) {
 
       if (depth === 0) {
         const inner = source.slice(start + 1, index);
-        if (inner.length <= maxBlockLength && !/={4,}/.test(inner))
-          blocks.push(inner);
+        if (inner.length <= maxBlockLength && !/={4,}/.test(inner)) blocks.push(inner);
         start = index;
         break;
       }
@@ -126,11 +119,7 @@ function squareBlocks(text) {
  * @returns {Array} seznam kandidátů
  */
 export function collectFormulas(text, options = {}) {
-  const {
-    collectInline = false,
-    collectParentheses = false,
-    fromDocx = false,
-  } = options;
+  const { collectInline = false, collectParentheses = false, fromDocx = false } = options;
 
   const found = [];
   const seen = new Set();
@@ -138,10 +127,7 @@ export function collectFormulas(text, options = {}) {
   const add = (raw, kind) => {
     const candidate = String(raw || "");
 
-    if (
-      candidate.length > 5000 ||
-      /(?:^|\n)\s*(?:#{1,6}\s|={4,}|[-_]{4,})/.test(candidate)
-    ) {
+    if (candidate.length > 5000 || /(?:^|\n)\s*(?:#{1,6}\s|={4,}|[-_]{4,})/.test(candidate)) {
       return;
     }
 
@@ -166,22 +152,17 @@ export function collectFormulas(text, options = {}) {
   for (const block of squareBlocks(text)) add(block, "blok [ … ]");
 
   // Hledání samostatného LaTeX
-  for (const line of text.split(/\n+/))
-    if (isStandaloneTex(line)) add(line, "samostatný LaTeX");
+  for (const line of text.split(/\n+/)) if (isStandaloneTex(line)) add(line, "samostatný LaTeX");
 
   // Inline výrazy (pokud povoleno)
   if (collectInline) {
-    for (const match of text.matchAll(
-      /\\\(([\s\S]{1,3000}?)\\\)|\$([^$\n]{1,3000})\$/g,
-    ))
+    for (const match of text.matchAll(/\\\(([\s\S]{1,3000}?)\\\)|\$([^$\n]{1,3000})\$/g))
       add(match[1] || match[2], "inline");
   }
 
   // Výrazy v kulatých závorkách (pokud povoleno)
   if (collectParentheses) {
-    for (const match of text.matchAll(
-      /\(([^()\n]{0,1500}\\[A-Za-z]+[^()\n]{0,1500})\)/g,
-    ))
+    for (const match of text.matchAll(/\(([^()\n]{0,1500}\\[A-Za-z]+[^()\n]{0,1500})\)/g))
       add(match[1], "kulaté závorky");
   }
 
@@ -190,9 +171,7 @@ export function collectFormulas(text, options = {}) {
     for (const match of text.matchAll(/\(([^()\n]*\\[A-Za-z]+[^()\n]*)\)/g))
       add(match[1], "inline z DOCX");
 
-    for (const match of text.matchAll(
-      /\(([A-Za-z](?:\s*[=<>]\s*[^()\n]+)?)\)/g,
-    ))
+    for (const match of text.matchAll(/\(([A-Za-z](?:\s*[=<>]\s*[^()\n]+)?)\)/g))
       add(match[1], "inline z DOCX");
   }
 

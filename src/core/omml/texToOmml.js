@@ -25,20 +25,14 @@ export function texToOmml(tex) {
   // V reálné aplikaci by zde byl komplexnější parser
 
   // Zlomky: \frac{a}{b}
-  result = result.replace(
-    /\\frac\{([^}]*)\}\{([^}]*)\}/g,
-    (match, num, denom) => {
-      return fraction(mathRun(num), mathRun(denom));
-    },
-  );
+  result = result.replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, (match, num, denom) => {
+    return fraction(mathRun(num), mathRun(denom));
+  });
 
   // Odmocniny: \sqrt{x} nebo \sqrt[n]{x}
-  result = result.replace(
-    /\\sqrt\[([^\]]*)\]\{([^}]*)\}/g,
-    (match, degree, content) => {
-      return radical(mathRun(content), mathRun(degree));
-    },
-  );
+  result = result.replace(/\\sqrt\[([^\]]*)\]\{([^}]*)\}/g, (match, degree, content) => {
+    return radical(mathRun(content), mathRun(degree));
+  });
 
   result = result.replace(/\\sqrt\{([^}]*)\}/g, (match, content) => {
     return radical(mathRun(content));

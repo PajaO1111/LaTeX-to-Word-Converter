@@ -56,8 +56,7 @@ export function collectStats(stats, originalTex, cleanedTex, fixesLog) {
 
   stats.addedBrackets += Math.max(
     0,
-    (cleaned.match(/[{}\[\]]/g) || []).length -
-      (source.match(/[{}\[\]]/g) || []).length,
+    (cleaned.match(/[{}[\]]/g) || []).length - (source.match(/[{}[\]]/g) || []).length
   );
 }
 
@@ -72,35 +71,25 @@ export function finalizeStats(stats, debugLog = []) {
 
   const entries = debugLog;
   const fixes = entries.flatMap((entry) =>
-    entry.event === "auto-fix" || entry.event === "heuristic-fix"
-      ? entry.fixes || []
-      : [],
+    entry.event === "auto-fix" || entry.event === "heuristic-fix" ? entry.fixes || [] : []
   );
 
   const countFix = (type) => fixes.filter((fix) => fix === type).length;
 
-  stats.fallbackRenders = entries.filter(
-    (entry) => entry.event === "katex-fallback",
-  ).length;
+  stats.fallbackRenders = entries.filter((entry) => entry.event === "katex-fallback").length;
 
-  stats.heuristicFixes = entries.filter(
-    (entry) => entry.event === "heuristic-fix",
-  ).length;
+  stats.heuristicFixes = entries.filter((entry) => entry.event === "heuristic-fix").length;
 
-  stats.matrixFixes =
-    countFix("matrix") + countFix("matrix-row-separator");
+  stats.matrixFixes = countFix("matrix") + countFix("matrix-row-separator");
 
   stats.delimiterFixes =
-    countFix("delimiters") +
-    countFix("delimiter-conflict") +
-    countFix("delimiter-pair");
+    countFix("delimiters") + countFix("delimiter-conflict") + countFix("delimiter-pair");
 
   stats.absoluteValueFixes = countFix("absolute-value");
 
   stats.nestedFixes = entries.filter(
     (entry) =>
-      entry.event === "heuristic-fix" &&
-      (entry.original || "").match(/\\left[\s\S]*\\left/),
+      entry.event === "heuristic-fix" && (entry.original || "").match(/\\left[\s\S]*\\left/)
   ).length;
 
   stats.unclosedLeftRightFixes = countFix("delimiter-pair");
@@ -108,12 +97,12 @@ export function finalizeStats(stats, debugLog = []) {
   stats.unterminatedEnvironmentFixes = countFix("matrix-end");
 
   stats.unterminatedBeginFixes = entries.filter(
-    (entry) => entry.event === "parser-overflow",
+    (entry) => entry.event === "parser-overflow"
   ).length;
 
   stats.vectorFixes = countFix("vector");
 
   stats.wordArtifactFixes = entries.filter(
-    (entry) => entry.event === "auto-fix" || entry.event === "heuristic-fix",
+    (entry) => entry.event === "auto-fix" || entry.event === "heuristic-fix"
   ).length;
 }

@@ -3,7 +3,7 @@
  * Unit testy pro heuristicFix modul.
  */
 
-import { heuristicFix } from "../src/core/latex/heuristicFix.js";
+import { heuristicFix } from "../../src/core/latex/heuristicFix.js";
 
 describe("heuristicFix", () => {
   test("should return object with repaired and fixes", () => {

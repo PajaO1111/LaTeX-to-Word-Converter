@@ -13,8 +13,7 @@ import { knownCommands } from "../utils/knownCommands.js";
  */
 export function validateLatexStructure(tex) {
   const value = String(tex || "");
-  if (value.length > 100000)
-    return { ok: false, reason: "Zápis je příliš dlouhý." };
+  if (value.length > 100000) return { ok: false, reason: "Zápis je příliš dlouhý." };
 
   const stack = [];
   const pairs = {
@@ -29,9 +28,7 @@ export function validateLatexStructure(tex) {
   };
 
   const delimiter = (text) =>
-    text.match(
-      /^\s*(\[|\]|\(|\)|\{|\}|\||\\(?:\{|\}|\||langle|rangle|lfloor|rfloor|lceil|rceil))/,
-    );
+    text.match(/^\s*(\[|\]|\(|\)|\{|\}|\||\\(?:\{|\}|\||langle|rangle|lfloor|rfloor|lceil|rceil))/);
 
   for (let index = 0; index < value.length; index++) {
     if (value[index] === "\\" && value[index + 1] === "\\") {
@@ -47,15 +44,13 @@ export function validateLatexStructure(tex) {
         if (["left", "right"].includes(name)) {
           const found = delimiter(value.slice(index + 1));
           if (!found) {
-            if (name === "right")
-              return { ok: false, reason: "Příkaz \\right nemá delimitér." };
+            if (name === "right") return { ok: false, reason: "Příkaz \\right nemá delimitér." };
             continue;
           }
           const token = found[1].replace(/\s/g, "");
           index += found[0].length;
           if (name === "left") stack.push({ token, close: pairs[token] });
-          else if (!stack.length)
-            return { ok: false, reason: "Osamocený příkaz \\right." };
+          else if (!stack.length) return { ok: false, reason: "Osamocený příkaz \\right." };
           else if (stack.pop().close !== token)
             return {
               ok: false,
@@ -73,18 +68,15 @@ export function validateLatexStructure(tex) {
       });
 
     if ("}])".includes(value[index])) {
-      const expected = { "}": "{", "]": "[", ")": "(" }[value[index]];
+      const _expected = { "}": "{", "]": "[", ")": "(" }[value[index]];
       if (!stack.length || stack.pop().close !== value[index])
         return { ok: false, reason: "Nesprávně spárované závorky." };
     }
   }
 
-  if (stack.length)
-    return { ok: false, reason: "Neuzavřená závorka nebo delimitér." };
+  if (stack.length) return { ok: false, reason: "Neuzavřená závorka nebo delimitér." };
 
-  const environments = [...value.matchAll(/\\begin\{([^}]+)\}/g)].map(
-    (match) => match[1],
-  );
+  const environments = [...value.matchAll(/\\begin\{([^}]+)\}/g)].map((match) => match[1]);
   for (const env of environments)
     if (!new RegExp(`\\\\end\\{${env}\\}`).test(value))
       return { ok: false, reason: `Neuzavřené prostředí \\begin{${env}}.` };

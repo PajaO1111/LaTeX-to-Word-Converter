@@ -6,7 +6,7 @@
 
 import { cleanTex, fallbackTex } from "../core/latex/cleanTex.js";
 import { heuristicFix } from "../core/latex/heuristicFix.js";
-import { validateFormula, validateFormulaWithFallback } from "../core/latex/validator.js";
+import { validateFormulaWithFallback } from "../core/latex/validator.js";
 import { classifyFixes } from "../core/latex/classifyFixes.js";
 import { collectFormulas } from "../core/latex/collector.js";
 import { createStats, collectStats, finalizeStats } from "../core/stats/statsCollector.js";
@@ -75,9 +75,7 @@ async function processFormula(candidate) {
  * @returns {Promise<Object[]>} zpracované formule
  */
 async function processBatch(batch, stats) {
-  const results = await Promise.all(
-    batch.map((candidate) => processFormula(candidate)),
-  );
+  const results = await Promise.all(batch.map((candidate) => processFormula(candidate)));
 
   for (const result of results) {
     if (result.status === "fixed" || result.status === "valid") {

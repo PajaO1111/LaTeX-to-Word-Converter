@@ -12,7 +12,7 @@
  */
 export function heuristicFix(tex) {
   let value = String(tex || "");
-  const original = value;
+  const _original = value;
   const fixes = [];
 
   const apply = (pattern, replacement, type) => {
@@ -27,12 +27,12 @@ export function heuristicFix(tex) {
   apply(
     /\\left\\langle([\s\S]*?)\\right\\rangle/g,
     "\\left\\langle$1\\right\\rangle",
-    "angle-brackets",
+    "angle-brackets"
   );
   apply(/\\middle\s*\|/g, "\\middle|", "middle");
   apply(/\\left\|([^|\\]+)$/g, "\\left|$1\\right|", "absolute-value");
   apply(/\\left\{([^{}\\]+)$/g, "\\left\\{$1\\right\\}", "braces");
-  apply(/\\left\[([^\[\]]+)$/g, "\\left[$1\\right]", "brackets");
+  apply(/\\left\[(^[\]\\]+)$/g, "\\left[$1\\right]", "brackets");
   apply(/\\left\(([^()]*)$/g, "\\left($1\\right)", "parentheses");
 
   const delimiterPairs = {
@@ -47,13 +47,12 @@ export function heuristicFix(tex) {
 
   const delimiterStack = [];
   for (const match of value.matchAll(
-    /\\(left|right)\s*(\[|\]|\(|\)|\||\\(?:\{|\}|langle|rangle|lfloor|rfloor|lceil|rceil))/g,
+    /\\(left|right)\s*(\[|\]|\(|\)|\||\\(?:\{|\}|langle|rangle|lfloor|rfloor|lceil|rceil))/g
   )) {
     const side = match[1];
     const token = match[2];
     if (side === "left") delimiterStack.push(delimiterPairs[token]);
-    else if (delimiterStack[delimiterStack.length - 1] === token)
-      delimiterStack.pop();
+    else if (delimiterStack[delimiterStack.length - 1] === token) delimiterStack.pop();
     else fixes.push("delimiter-conflict");
   }
 
@@ -65,8 +64,7 @@ export function heuristicFix(tex) {
     fixes.push("delimiter-pair");
   }
 
-  const matrixStart =
-    /\\begin\{(pmatrix|bmatrix|Bmatrix|vmatrix|Vmatrix|array)\}/g;
+  const matrixStart = /\\begin\{(pmatrix|bmatrix|Bmatrix|vmatrix|Vmatrix|array)\}/g;
   value = value.replace(matrixStart, (match, env, offset, source) => {
     const close = `\\end{${env}}`;
     if (source.indexOf(close, offset + match.length) >= 0) return match;
@@ -77,13 +75,10 @@ export function heuristicFix(tex) {
   value = value.replace(
     /(\\begin\{(?:pmatrix|bmatrix|Bmatrix|vmatrix|Vmatrix|array)\})([\s\S]*?)(\\end\{(?:pmatrix|bmatrix|Bmatrix|vmatrix|Vmatrix|array)\})/g,
     (match, start, body, end) => {
-      const repaired = body.replace(
-        /([A-Za-z])_(\d+)(?=[A-Za-z]_(?:\d+|\{))/g,
-        "$1_$2\\\\",
-      );
+      const repaired = body.replace(/([A-Za-z])_(\d+)(?=[A-Za-z]_(?:\d+|\{))/g, "$1_$2\\\\");
       if (repaired !== body) fixes.push("matrix-row-separator");
       return `${start}${repaired}${end}`;
-    },
+    }
   );
 
   return { repaired: value, fixes: [...new Set(fixes)] };

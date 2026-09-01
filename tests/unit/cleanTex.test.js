@@ -3,7 +3,7 @@
  * Unit testy pro cleanTex modul.
  */
 
-import { cleanTex, fallbackTex } from "../src/core/latex/cleanTex.js";
+import { cleanTex, fallbackTex } from "../../src/core/latex/cleanTex.js";
 
 describe("cleanTex", () => {
   test("should return empty string for empty input", () => {

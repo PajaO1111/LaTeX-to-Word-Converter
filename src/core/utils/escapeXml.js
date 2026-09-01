@@ -19,7 +19,7 @@ export function escapeXml(value) {
         "&": "&amp;",
         '"': "&quot;",
         "'": "&apos;",
-      })[c],
+      })[c]
   );
 }
 
