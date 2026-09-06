@@ -10493,6 +10493,7 @@ Error generating stack: ` +
           { id: "validate", label: "validate", sub: "Validace", icon: Et },
           { id: "omml", label: "texToOmml", sub: "Konverze", icon: qe },
           { id: "export", label: "DOCX Export", sub: "Výstup", icon: Pr },
+          { id: "html", label: "HTML Export", sub: "Web výstup", icon: Er },
         ],
         _h = [
           {
@@ -10664,7 +10665,7 @@ Error generating stack: ` +
           {
             phase: 8,
             title: "Finální integrace",
-            desc: "Propojení všech modulů do robustního systému. Export validního DOCX.",
+            desc: "Propojení všech modulů do robustního systému. Export validního DOCX i samostatného HTML.",
             date: "Fáze 8",
             final: !0,
           },
@@ -10676,6 +10677,7 @@ Error generating stack: ` +
           "Zobrazuje náhled pomocí KaTeXu",
           "Převádí do OMML",
           "Exportuje validní DOCX",
+          "Exportuje i samostatné HTML s rovnicemi (MathML)",
           "Generuje statistiky",
           "Provádí zátěžové testy",
           "Automaticky přepíná téma",
@@ -10933,6 +10935,8 @@ Error generating stack: ` +
                                               "Generuje Office MathML pro Word rovnice.",
                                             h.id === "export" &&
                                               "Vytvoří validní DOCX připravený k otevření ve Wordu.",
+                                            h.id === "html" &&
+                                              "Vygeneruje samostatný HTML soubor s rovnicemi jako MathML – bez Wordu, jen prohlížeč a KaTeX.",
                                           ],
                                         }),
                                     ],
