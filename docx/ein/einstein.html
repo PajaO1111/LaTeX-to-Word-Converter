@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Einstein – Testovací dokument</title>
+
+  <!-- Bootstrap minimal -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/katex.min.js"></script>
+
+  <style>
+    body { padding: 40px; }
+    .equation-annotation {
+      margin: 25px 0;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    .equation-render {
+      overflow-x: auto;
+      padding: 10px;
+    }
+    .invalid-equation {
+      background: #fff3cd;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body class="container">
+
+  <h1 class="mb-4">Albert Einstein – Testovací dokument</h1>
+
+  <p>
+    Albert Einstein byl jedním z nejvýznamnějších fyziků 20. století. Jeho práce zásadně změnila pohled na prostor,
+    čas, gravitaci i energii. V roce 1905 publikoval několik přelomových článků, které položily základy moderní fyziky.
+  </p>
+
+  <p>Níže je několik jeho známých rovnic a konceptů, které slouží jako test pro převod LaTeX → OMML.</p>
+
+  <hr>
+
+  <!-- ========================================================= -->
+  <!-- 1) E = mc^2 -->
+  <!-- ========================================================= -->
+<div class="equation-annotation">
+  <div class="equation-render mt-3 overflow-x-auto">
+    <span class="katex-display">
+      <span class="katex">
+
+        <!-- MathML -->
+        <span class="katex-mathml">
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <semantics>
+              <mrow>
+                <mi>E</mi>
+                <mo>=</mo>
+                <mi>m</mi>
+                <msup><mi>c</mi><mn>2</mn></msup>
+              </mrow>
+              <annotation encoding="application/x-tex">E = mc^2</annotation>
+            </semantics>
+          </math>
+        </span>
+
+        <!-- FULL KaTeX HTML RENDER -->
+        <span class="katex-html" aria-hidden="true">
+          <span class="base">
+            <span class="strut" style="height:0.8141em;vertical-align:-0.1944em;"></span>
+            <span class="mord mathnormal">E</span>
+            <span class="mspace" style="margin-right:0.2778em;"></span>
+            <span class="mrel">=</span>
+            <span class="mspace" style="margin-right:0.2778em;"></span>
+            <span class="mord mathnormal">m</span>
+            <span class="mord">
+              <span class="msupsub">
+                <span class="vlist-t vlist-t2">
+                  <span class="vlist-r">
+                    <span class="vlist" style="height:0.8141em;">
+                      <span style="top:-0.8141em;">
+                        <span class="pstrut" style="height:0.8141em;"></span>
+                        <span class="sizing reset-size6 size3 mtight">
+                          <span class="mord mtight">2</span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="vlist-s">​</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+
+      </span>
+    </span>
+  </div>
+</div>
+
+
+  <!-- ========================================================= -->
+  <!-- 2) Časová dilatace -->
+  <!-- ========================================================= -->
+
+  <div class="equation-annotation">
+    <div class="equation-render">
+      <span class="katex-display">
+        <span class="katex">
+          <span class="katex-mathml">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <msup><mi>t</mi><mo>'</mo></msup>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mi>t</mi>
+                    <msqrt>
+                      <mrow>
+                        <mn>1</mn>
+                        <mo>-</mo>
+                        <mfrac>
+                          <msup><mi>v</mi><mn>2</mn></msup>
+                          <msup><mi>c</mi><mn>2</mn></msup>
+                        </mfrac>
+                      </mrow>
+                    </msqrt>
+                  </mfrac>
+                </mrow>
+                <annotation encoding="application/x-tex">
+                  t' = \frac{t}{\sqrt{1 - \frac{v^2}{c^2}}}
+                </annotation>
+              </semantics>
+            </math>
+          </span>
+          <span class="katex-html" aria-hidden="true"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 3) Lorentzova transformace -->
+  <!-- ========================================================= -->
+
+  <div class="equation-annotation">
+    <div class="equation-render">
+      <span class="katex-display">
+        <span class="katex">
+          <span class="katex-mathml">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <msup><mi>x</mi><mo>'</mo></msup>
+                  <mo>=</mo>
+                  <mi>γ</mi>
+                  <mo>(</mo>
+                  <mi>x</mi>
+                  <mo>-</mo>
+                  <mi>v</mi><mi>t</mi>
+                  <mo>)</mo>
+                </mrow>
+                <annotation encoding="application/x-tex">
+                  x' = \gamma \left( x - vt \right)
+                </annotation>
+              </semantics>
+            </math>
+          </span>
+          <span class="katex-html" aria-hidden="true"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ========================================================= -->
+  <!-- 4) Inline rovnice -->
+  <!-- ========================================================= -->
+
+  <p>
+    Einsteinův vztah pro fotoelektrický jev je
+    <span class="katex">E = h\nu - W</span>.
+  </p>
+
+  <hr>
+
+  <!-- ========================================================= -->
+  <!-- 5) Artefakty – zobrazit jako text -->
+  <!-- ========================================================= -->
+
+  <div class="equation-annotation">
+    <div class="invalid-equation">\left{ a + b \right}</div>
+    <div class="invalid-equation">\rightarrowL</div>
+    <div class="invalid-equation">\begin{pmatrix}2\0\end{pmatrix}</div>
+  </div>
+
+  <hr>
+
+  <!-- ========================================================= -->
+  <!-- 6) Matice -->
+  <!-- ========================================================= -->
+
+  <div class="equation-annotation">
+    <div class="equation-render">
+      <span class="katex-display">
+        <span class="katex">
+          <span class="katex-mathml">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <mo>(</mo>
+                  <mtable>
+                    <mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+                    <mtr><mtd><mn>0</mn></mtd><mtd><mn>-1</mn></mtd></mtr>
+                  </mtable>
+                  <mo>)</mo>
+                </mrow>
+                <annotation encoding="application/x-tex">
+                  \begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}
+                </annotation>
+              </semantics>
+            </math>
+          </span>
+          <span class="katex-html" aria-hidden="true"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <hr>
+
+  <p><strong>Konec testovacího dokumentu.</strong></p>
+
+</body>
+</html>

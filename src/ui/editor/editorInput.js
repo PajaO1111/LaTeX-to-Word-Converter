@@ -133,3 +133,29 @@ export function clearEditor(editorElement) {
     editorElement.textContent = "";
   }
 }
+
+/**
+ * Rozloží obsah contenteditable editoru na strukturované bloky (odstavce,
+ * nadpisy, seznamy, tabulky) zachovávající pořadí a formátovací uzly.
+ * @param {HTMLElement} editorElement - contenteditable element
+ * @returns {{tag: string, node: Node, text: string}[]} seznam bloků
+ */
+export function getEditorBlocks(editorElement) {
+  const blocks = [];
+  if (!editorElement) return blocks;
+  for (const child of editorElement.childNodes) {
+    if (child.nodeType === Node.TEXT_NODE && child.nodeValue.trim()) {
+      for (const text of child.nodeValue.split(/\n+/))
+        if (text.trim()) blocks.push({ tag: "p", node: child, text });
+    } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName.toLowerCase() !== "table") {
+      blocks.push({
+        tag: child.tagName.toLowerCase(),
+        node: child,
+        text: child.innerText,
+      });
+    } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName.toLowerCase() === "table") {
+      blocks.push({ tag: "table", node: child, text: "" });
+    }
+  }
+  return blocks;
+}

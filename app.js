@@ -564,7 +564,7 @@ function squareBlocks(text) {
       if (depth === 0) {
         const inner = source.slice(start + 1, index);
         if (inner.length <= maxBlockLength && !/={4,}/.test(inner))
-          blocks.push(inner);
+          blocks.push({ inner, start, end: index + 1 });
         start = index;
         break;
       }
@@ -612,7 +612,15 @@ function isStandaloneTex(text) {
 function collectFormulas(text) {
   const found = [];
   const seen = new Set();
-  const add = (raw, kind) => {
+  // Rozsahy už zabrané větším blokem (např. \[ … \] nebo [ … ]), aby se
+  // vnořené fragmenty (\left[ … \right] nebo (…) uvnitř nich) nesbíraly znovu.
+  const claimedRanges = [];
+  const claim = (range) => {
+    if (range) claimedRanges.push(range);
+  };
+  const overlapsClaimed = (start, end) =>
+    claimedRanges.some(([s, e]) => start < e && end > s);
+  const add = (raw, kind, range = null) => {
     const candidate = String(raw || "");
     if (
       candidate.length > 5000 ||
@@ -646,33 +654,74 @@ function collectFormulas(text) {
       seen.add(tex);
       found.push({ ...prepared, tex, raw: String(raw).trim(), kind });
     }
+    claim(range);
   };
-  for (const match of text.matchAll(/\\left\[([\s\S]{1,5000}?)\\right\]/g))
-    add(match[0], "blok \\left[ … \\right]");
+  // Nejprve větší kontejnery (\[ … \] a [ … ]), aby si zabraly svůj rozsah dřív
+  // než menší vzory, které by jinak vytáhly jejich vnořený obsah jako duplicitu.
   for (const match of text.matchAll(/\\\[\s*([\s\S]{1,5000}?)\s*\\\]/g))
-    add(match[1], "blok \\[ … \\]");
-  for (const block of squareBlocks(text)) add(block, "blok [ … ]");
-  for (const line of text.split(/\n+/))
-    if (isStandaloneTex(line)) add(line, "samostatný LaTeX");
+    add(match[1], "blok \\[ … \\]", [match.index, match.index + match[0].length]);
+  for (const block of squareBlocks(text))
+    add(block.inner, "blok [ … ]", [block.start, block.end]);
+  for (const match of text.matchAll(/\\left\[([\s\S]{1,5000}?)\\right\]/g)) {
+    const range = [match.index, match.index + match[0].length];
+    if (overlapsClaimed(range[0], range[1])) continue;
+    add(match[0], "blok \\left[ … \\right]", range);
+  }
+  for (const match of text.matchAll(/[^\n]+/g)) {
+    const line = match[0];
+    if (!isStandaloneTex(line)) continue;
+    const range = [match.index, match.index + line.length];
+    if (overlapsClaimed(range[0], range[1])) continue;
+    add(line, "samostatný LaTeX", range);
+  }
   if ($("convert-inline").checked) {
     for (const match of text.matchAll(
       /\\\(([\s\S]{1,3000}?)\\\)|\$([^$\n]{1,3000})\$/g,
-    ))
-      add(match[1] || match[2], "inline");
+    )) {
+      const range = [match.index, match.index + match[0].length];
+      if (overlapsClaimed(range[0], range[1])) continue;
+      add(match[1] || match[2], "inline", range);
+    }
   }
   if ($("convert-paren").checked) {
     for (const match of text.matchAll(
       /\(([^()\n]{0,1500}\\[A-Za-z]+[^()\n]{0,1500})\)/g,
-    ))
-      add(match[1], "kulaté závorky");
+    )) {
+      const range = [match.index, match.index + match[0].length];
+      // Vynech (…) patřící do \( … \) nebo \left( … \right) – to jsou
+      // uzávorkované oddělovače, ne samostatný zápis v kulatých závorkách.
+      if (
+        text[match.index - 1] === "\\" ||
+        text.slice(Math.max(0, match.index - 5), match.index) === "\\left"
+      )
+        continue;
+      if (overlapsClaimed(range[0], range[1])) continue;
+      add(match[1], "kulaté závorky", range);
+    }
   }
   if (state.documentXml) {
-    for (const match of text.matchAll(/\(([^()\n]*\\[A-Za-z]+[^()\n]*)\)/g))
-      add(match[1], "inline z DOCX");
+    for (const match of text.matchAll(/\(([^()\n]*\\[A-Za-z]+[^()\n]*)\)/g)) {
+      const range = [match.index, match.index + match[0].length];
+      if (
+        text[match.index - 1] === "\\" ||
+        text.slice(Math.max(0, match.index - 5), match.index) === "\\left"
+      )
+        continue;
+      if (overlapsClaimed(range[0], range[1])) continue;
+      add(match[1], "inline z DOCX", range);
+    }
     for (const match of text.matchAll(
       /\(([A-Za-z](?:\s*[=<>]\s*[^()\n]+)?)\)/g,
-    ))
-      add(match[1], "inline z DOCX");
+    )) {
+      const range = [match.index, match.index + match[0].length];
+      if (
+        text[match.index - 1] === "\\" ||
+        text.slice(Math.max(0, match.index - 5), match.index) === "\\left"
+      )
+        continue;
+      if (overlapsClaimed(range[0], range[1])) continue;
+      add(match[1], "inline z DOCX", range);
+    }
   }
   return found;
 }
@@ -1969,6 +2018,149 @@ function htmlRuns(node, style = {}, invalidTexes = new Set()) {
     .map((child) => htmlRuns(child, next, invalidTexes))
     .join("");
 }
+
+function htmlTextRuns(node, style = {}, invalidTexes = new Set()) {
+  if (node.nodeType === Node.TEXT_NODE)
+    return splitHtmlInline(node.nodeValue, style, invalidTexes);
+  if (node.nodeType !== Node.ELEMENT_NODE) return "";
+  const tag = node.tagName.toLowerCase();
+  if (tag === "br") return "<br>";
+  const next = {
+    ...style,
+    bold: style.bold || tag === "b" || tag === "strong",
+    italic: style.italic || tag === "i" || tag === "em",
+    underline: style.underline || tag === "u",
+  };
+  const content = [...node.childNodes]
+    .map((child) => htmlTextRuns(child, next, invalidTexes))
+    .join("");
+  if (tag === "strong" || tag === "b") return `<strong>${content}</strong>`;
+  if (tag === "em" || tag === "i") return `<em>${content}</em>`;
+  if (tag === "u") return `<u>${content}</u>`;
+  return content;
+}
+
+function renderHtmlFormula(tex, invalidTexes = new Set()) {
+  const value = cleanTex(tex);
+  if (invalidTexes.has(value)) return escapeHtml(tex);
+  try {
+    return katex.renderToString(value, {
+      displayMode: true,
+      output: "mathml",
+      throwOnError: true,
+      strict: "ignore",
+    });
+  } catch (_) {
+    const fallback = fallbackTex(value);
+    try {
+      return katex.renderToString(fallback, {
+        displayMode: true,
+        output: "mathml",
+        throwOnError: true,
+        strict: "ignore",
+      });
+    } catch (error) {
+      return `<span class="formula-error">${escapeHtml(error.message)}</span>`;
+    }
+  }
+}
+
+function splitHtmlInline(text, style = {}, invalidTexes = new Set()) {
+  if (!$("convert-inline").checked) return escapeHtml(text);
+  const rx = /\\\(([^\n]*?)\\\)|\$([^$\n]+)\$/g;
+  let out = "";
+  let cursor = 0;
+  for (const match of text.matchAll(rx)) {
+    out += escapeHtml(text.slice(cursor, match.index));
+    const tex = cleanTex(match[1] || match[2]);
+    if (invalidTexes.has(tex)) out += escapeHtml(match[0]);
+    else out += renderHtmlFormula(tex, invalidTexes);
+    cursor = match.index + match[0].length;
+  }
+  out += escapeHtml(text.slice(cursor));
+  if (style.bold) out = `<strong>${out}</strong>`;
+  if (style.italic) out = `<em>${out}</em>`;
+  if (style.underline) out = `<u>${out}</u>`;
+  return out;
+}
+
+function createHtmlFromEditor(invalidTexes = new Set()) {
+  const blocks = state.documentXml
+    ? [...new DOMParser()
+        .parseFromString(state.documentXml, "application/xml")
+        .getElementsByTagNameNS(W, "p")]
+        .map((paragraph) => {
+          const text = paragraphText(paragraph);
+          return { tag: "p", node: document.createTextNode(text), text };
+        })
+    : editorBlocks();
+  let body = "";
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i];
+    if (block.tag === "table") {
+      const rows = [...block.node.rows]
+        .map(
+          (row) =>
+            `<tr>${[...row.cells].map((cell) => `<td>${[...cell.childNodes].map((node) => htmlTextRuns(node, {}, invalidTexes)).join("")}</td>`).join("")}</tr>`,
+        )
+        .join("");
+      body += `<table>${rows}</table>`;
+      continue;
+    }
+    const environment = environmentStart(block.text);
+    if (environment) {
+      let tex = block.text;
+      let end = -1;
+      for (let k = i + 1; k < blocks.length && k < i + 50; k++) {
+        tex += "\n" + blocks[k].text;
+        if (environmentEnd(blocks[k].text, environment)) {
+          end = k;
+          break;
+        }
+      }
+      if (end >= 0) {
+        body += `<div class="equation-render">${renderHtmlFormula(tex, invalidTexes)}</div>`;
+        i = end;
+        continue;
+      }
+    }
+    const blockMatch = blockFormula(block.text);
+    if (blockMatch) {
+      body += `<div class="equation-render">${renderHtmlFormula(blockMatch[1], invalidTexes)}</div>`;
+      continue;
+    }
+    const escaped = blockStart(block.text);
+    if (escaped !== null) {
+      const ending = escaped ? /^\s*\\\]\s*$/ : /^\s*\]\s*$/;
+      let tex = "";
+      let end = -1;
+      for (let k = i + 1; k < blocks.length && k < i + 50; k++) {
+        if (ending.test(blocks[k].text)) {
+          end = k;
+          break;
+        }
+        tex += (tex ? "\n" : "") + blocks[k].text;
+      }
+      if (end > i) {
+        body += `<div class="equation-render">${renderHtmlFormula(tex, invalidTexes)}</div>`;
+        i = end;
+        continue;
+      }
+    }
+    // Stejná detekce jako v editorPara() pro DOCX, jinak "holé" LaTeX řádky
+    // (bez \[ \], \( \) nebo $ $) zůstanou v HTML nepřevedené.
+    if (isStandaloneTex(block.text)) {
+      body += `<div class="equation-render">${renderHtmlFormula(block.text, invalidTexes)}</div>`;
+      continue;
+    }
+    const tag = /^h[1-3]$/.test(block.tag) ? block.tag : "p";
+    const content = block.node.nodeType === Node.TEXT_NODE
+      ? splitHtmlInline(block.text, {}, invalidTexes)
+      : [...block.node.childNodes].map((node) => htmlTextRuns(node, {}, invalidTexes)).join("");
+    body += `<${tag}>${content || escapeHtml(block.text)}</${tag}>`;
+  }
+  return body || "<p></p>";
+}
 function splitInline(text, style, invalidTexes = new Set()) {
   if (!$("convert-inline").checked) return runXml(text, style);
   let out = "",
@@ -2141,8 +2333,10 @@ async function exportDocx() {
       compression: "DEFLATE",
     });
     await validateInputFormat(blob, "docx");
+    // Musí odpovídat kritériu, podle kterého se rovnice skutečně vynechávají (invalidTexes),
+    // jinak status "fixed"/"valid" z KaTeX validace neodpovídá tomu, co je podporováno v OMML.
     const convertible = formulas.filter(
-      (formula) => formula.status !== "invalid",
+      (formula) => formula.status !== "invalid" && !invalidTexes.has(formula.tex),
     ).length;
     const report = await validateDocxPackage(blob, existingMath + convertible);
     const link = document.createElement("a");
@@ -2173,6 +2367,73 @@ function downloadDebugLog() {
   link.download = `latex-word-debug-${APP_VERSION.replace(/\./g, "-")}.txt`;
   link.click();
   setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function getKatexCss() {
+  for (const styleSheet of document.styleSheets) {
+    if (!styleSheet.href || !/katex(?:\.min)?\.css(?:$|\?)/i.test(styleSheet.href)) continue;
+
+    try {
+      return Array.from(styleSheet.cssRules, (rule) => rule.cssText).join("\n");
+    } catch (_) {
+      return "";
+    }
+  }
+
+  return "";
+}
+
+function exportHtml() {
+  try {
+    const formulas = scan();
+    const invalidTexes = invalidFormulaSet(formulas);
+    const documentHtml = createHtmlFromEditor(invalidTexes);
+    const katexCss = getKatexCss();
+    const html = `<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <title>LaTeX → HTML export</title>
+  <style>${katexCss}</style>
+  <style>
+    body { font-family: "Segoe UI", system-ui, sans-serif; margin: 2rem; color: #17202a; background: #f4f7fa; }
+    p, h1, h2, h3, table, .equation-render { margin: 0 0 1rem; }
+    table { border-collapse: collapse; }
+    td { border: 1px solid #d9e1e8; padding: 0.5rem 0.75rem; }
+    .equation-render { background: #fbfdff; border: 1px solid #d9e1e8; border-radius: 8px; padding: 1.25rem; overflow-x: auto; }
+    .formula-error { color: #b42318; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>LaTeX do HTML</h1>
+  <main>${documentHtml}</main>
+</body>
+</html>`;
+    const blob = new Blob(["\uFEFF", html], {
+      type: "text/html;charset=utf-8",
+    });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "latex-rovnice.html";
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+    const countText = formulas.length
+      ? `Hotovo: export HTML obsahuje původní text a ${formulas.length} zpracovaných rovnic.`
+      : "Hotovo: export HTML byl vytvořen s původním textem bez rozpoznaných rovnic.";
+    $("export-note").textContent = countText;
+  } catch (error) {
+    debug("export-html-error", { error: error.message });
+    $("export-note").textContent = "Export HTML se nezdařil: " + error.message;
+  }
 }
 
 $("docx-file").addEventListener("change", async (event) => {
@@ -2217,6 +2478,13 @@ $("editor").addEventListener("input", () => {
 });
 $("scan").addEventListener("click", scan);
 $("download").addEventListener("click", exportDocx);
+$("download-html").addEventListener("click", () => {
+  if (window.latexWordHtmlExport && typeof window.latexWordHtmlExport.exportHtml === "function") {
+    window.latexWordHtmlExport.exportHtml();
+    return;
+  }
+  exportHtml();
+});
 const debugButton = document.createElement("button");
 debugButton.type = "button";
 debugButton.className = "minor";
@@ -2253,3 +2521,4 @@ themeToggle.addEventListener("click", () => {
   }
 });
 $("stress-test").addEventListener("click", runStressTest);
+window.latexWordApp = { scan, sourceText };

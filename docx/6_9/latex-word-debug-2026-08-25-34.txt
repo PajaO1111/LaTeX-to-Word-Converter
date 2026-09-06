@@ -1,0 +1,5 @@
+﻿# LaTeX → Word debug log
+# version: 2026.08.25.34
+# generated: 2026-09-06T09:07:34.186Z
+{"time":"2026-09-06T09:07:29.066Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left\\lfloor x \\right\\rceil\\right\\rfloor","fallback":"\\lfloor x \\rceil\\rfloor","error":"KaTeX parse error: Expected 'EOF', got '\\right' at position 28: … x \\right\\rceil\\̲r̲i̲g̲h̲t̲\\rfloor"}
+{"time":"2026-09-06T09:07:29.066Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left\\lceil x \\right\\rfloor\\right\\rceil","fallback":"\\lceil x \\rfloor\\rceil","error":"KaTeX parse error: Expected 'EOF', got '\\right' at position 28: …x \\right\\rfloor\\̲r̲i̲g̲h̲t̲\\rceil"}

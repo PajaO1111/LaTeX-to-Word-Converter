@@ -23,6 +23,9 @@ export default [
         localStorage: "readonly",
         URL: "readonly",
         Blob: "readonly",
+        Node: "readonly",
+        XMLSerializer: "readonly",
+        File: "readonly",
       },
     },
     rules: {
@@ -36,6 +39,7 @@ export default [
       "no-console": "off",
       "prefer-const": "warn",
       "no-var": "warn",
+      "no-control-regex": "off",
     },
   },
   {

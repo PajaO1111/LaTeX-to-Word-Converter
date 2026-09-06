@@ -1,0 +1,4 @@
+﻿# LaTeX → Word debug log
+# version: 2026.08.25.34
+# generated: 2026-09-06T09:03:23.221Z
+Žádný debug log.

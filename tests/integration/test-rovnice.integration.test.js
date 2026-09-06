@@ -141,7 +141,9 @@ describe("Integration: test_rovnice.txt", () => {
       }
 
       expect(formula.omml).toBeTruthy();
-      expect(formula.omml).toContain("<m:oMath");
+      // texToOmml vrací vnitřní OMML fragment (bez obalu <m:oMath>) - obalení
+      // provádí volající (equationPara / <m:oMath> v docxExporteru).
+      expect(formula.omml).toMatch(/<m:/);
     });
   });
 

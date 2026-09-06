@@ -1,12 +1,108 @@
-# LaTeX do rovnic ve Wordu
+# LaTeX do Wordu
+
+Lokální aplikace pro převod LaTeX rovnic do formátu Office Math (OMML), který je plně kompatibilní s Microsoft Word. Aplikace běží přímo v prohlížeči, pracuje bez backendu a umožňuje export upraveného DOCX dokumentu s matematickými objekty.
 
 <a href="help-redirect.html" target="_blank">Help</a>
 
-Otevřete `index.html` v moderním prohlížeči. Aplikace je plně lokální – žádný soubor ani text se neodesílá na server.
+## Co aplikace umí
 
-## Jak se zapisují rovnice
+- načítá text z editoru nebo DOCX souboru,
+- identifikuje a izoluje LaTeX rovnice,
+- odstraňuje běžné Word artefakty a rozbité sekvence,
+- opravuje běžné chyby v zápisu závorek a příkazů,
+- validuje rostoucí množství formulí,
+- vykresluje náhled přes KaTeX,
+- převádí validní rovnice do OMML,
+- sestaví upravený DOCX dokument pro Word,
+- poskytuje statistiku a debug log pro analýzu.
 
-Nejspolehlivější je samostatný blok v jedné z těchto forem:
+## Jak aplikace funguje
+
+Celý postup je rozdělen do modulů a probíhá v logickém pořadí:
+
+1. Načtení vstupu
+2. Sběr kandidátů na rovnice
+3. Čištění a normalizace textu
+4. Heuristické opravy
+5. Validace po opravě
+6. Výpočet statistik a logů
+7. Render náhledu
+8. Převod do OMML
+9. Export DOCX
+
+## Struktura projektu
+
+```text
+latex-do-wordu/
+├── app.js
+├── index.html
+├── style.css
+├── help-redirect.html
+├── README.md
+├── uprava.md
+├── docs/
+│   └── README.md
+├── docx/
+│   ├── test_rovnice.txt
+│   ├── test_700.txt
+│   └── ...
+├── src/
+│   ├── app/
+│   │   ├── app.js
+│   │   └── orchestrator.js
+│   ├── core/
+│   │   ├── latex/
+│   │   ├── omml/
+│   │   ├── stats/
+│   │   └── utils/
+│   ├── ui/
+│   │   ├── editor/
+│   │   ├── events/
+│   │   ├── export/
+│   │   ├── renderer/
+│   │   └── theme/
+│   └── README.md
+├── tests/
+│   ├── unit/
+│   └── integration/
+├── vendor/
+│   └── katex/
+├── package.json
+├── eslint.config.js
+├── .github/
+│   └── workflows/
+└── README.md
+```
+
+## Popis hlavních částí
+
+### Core layer
+Zde se nachází čistá logika zpracování LaTeXu a OMML:
+
+- `cleanTex` – odstraňuje Word artefakty a běžný šum,
+- `heuristicFix` – opravuje časté překlepy a neúplné struktury,
+- `validator` – kontroluje, zda je rovnice syntakticky validní,
+- `collector` – hledá LaTeX formula candidates ve vstupním textu,
+- `texToOmml` – převadí text do OMML,
+- `statsCollector` – shromažďuje výstupní statistiky,
+- `debug` – centralizuje diagnostiku.
+
+### UI layer
+UI vrstva pracuje s DOM a vlastní náhledem, exportem a eventy:
+
+- editor a input sanitization,
+- KaTeX preview rendering,
+- seznam nevyřízených formulí,
+- statistický panel,
+- export do DOCX,
+- registrace tlačítek a událostí.
+
+### App orchestration
+Hlavní workflow je v [src/app/orchestrator.js](src/app/orchestrator.js) a vrstvách v [src/app/app.js](src/app/app.js). Orchestrátor řídí tok dat od vstupu po export.
+
+## Jak zapisovat rovnice
+
+Nejpřesnější je samostatný blok v jedné z těchto forem:
 
 ```text
 [
@@ -18,45 +114,50 @@ Nejspolehlivější je samostatný blok v jedné z těchto forem:
 \[ \boxed{B^m} \]
 ```
 
-Fungují také bloky na jediné řádce (`[ \mathbf t=A\mathbf s+\mathbf e ]`), inline zápis `\( ... \)` a `$...$`. Volitelně lze zapnout rozpoznání zápisu s příkazy LaTeX v kulatých závorkách.
+Fungují také zápisy na jedné řádce, inline formy `\( ... \)` a `$...$`.
 
-## Co výstup zachová
+## Výstup a kompatibilita
 
-- Při načtení DOCX zůstávají beze změny všechny odstavce, styly, tabulky, obrázky a obsah mimo nahrazené bloky rovnic.
-- Při vložení z Wordu zachová nově vytvořený dokument odstavce, nadpisy, tučné/kurzíva/podtržení, seznamy a jednoduché tabulky.
-- Rovnice ve výstupu jsou Office Math (OMML), tedy dále upravitelné ve Wordu.
-- Před stažením aplikace znovu otevře vytvořený ZIP, ověří kontrolní součty, povinné části DOCX, XML a počet objektů Office Math. Pokud kontrola neprojde, soubor se nestáhne.
+- výsledný dokument zachovává obsah mimo rovnice,
+- úpravou se mění pouze zjištěné bloky rovnic,
+- rovnice jsou exportovány ve formátu Office Math (OMML),
+- po exportu je možné je v Wordu dále upravovat jako matematické objekty.
 
-## Důležité omezení
+## Omezení
 
-Převodník obsahuje praktickou podmnožinu LaTeXu: zlomky, odmocniny, indexy, mocniny, řecká písmena, `\mathbf`, `\mathrm`, `\text`, `\boxed`, součty/integrály a běžné operátory. KaTeX v náhledu umí větší množinu; složité matice a specializované balíčky se proto mohou ve Wordu zjednodušit. Před stažením vždy zkontrolujte náhled a otevřete výsledek ve Wordu.
-
-Knihovny: KaTeX 0.18.1 (MIT) a JSZip 3.10.1 (MIT/GPL-3.0).
-
-### Složené závorky u množin
-
-Správný zápis pro množinu generovanou bázovými vektory je například:
-
-```text
-\boxed{L=\left\{\sum_{i=1}^{n} z_i\mathbf{b}_i\;\middle|\;z_i\in\mathbb{Z}\right\}.}
-```
-
-Aplikace automaticky opraví častý překlep `\left{` / `\right}` na tuto podobu.
+Aplikace podporuje praktickou podmnožinu LaTeXu: zlomky, odmocniny, indexy, mocniny, řecká písmena, `\mathbf`, `\mathrm`, `\text`, `\boxed`, jednoduché operátory, základní matice a vektory. Složitější balíčky nebo specializované konstrukce mohou být zjednodušeny.
 
 ## Diagnostika a testování
 
-Při každé kontrole aplikace zobrazí statistiky vstupu v rozbalovací části:
+Aplikace umožňuje zobrazení statistiky zpracování a detailního debug logu. Testy ověřují:
 
-- počet kandidátů před čištěním a počet unikátních vzorců po čištění,
-- celkový počet oprav a jejich typy,
-- počet doplněných závorek,
-- počet neznámých příkazů,
-- čas zpracování.
+- čištění textu,
+- heuristické opravy,
+- validaci rovnic,
+- sběr formulí,
+- OMML konverzi,
+- robustnost na reálná data.
 
-Tlačítko **Spustit test 500+ rovnic** provede lokální zátěžový test 520 rovnic. Test kombinuje matice, vektory, nested delimitery a běžné Word artefakty. Samostatně ověřuje také neuzavřené závorky, neznámé příkazy, příliš dlouhé vstupy, chybné delimiterové páry a neúplná maticová prostředí. Výsledek obsahuje čas KaTeX renderu, čas převodu do OMML, počet chybových scénářů, opakované běhy, počet DOM uzlů a velikost debug logu.
+Pro spuštění testů:
 
-Podrobný log lze stáhnout tlačítkem **Stáhnout debug log**. Obsahuje původní a vyčištěný zápis, provedené heuristické opravy, použití KaTeX fallbacku, chyby a přeskočené zápisy.
+```bash
+npm install
+npm test -- --run
+npm run lint
+```
 
-## Téma aplikace
+## Dokumentace
 
-Aplikace automaticky respektuje tmavé nebo světlé téma operačního systému. Tlačítkem v hlavičce lze režim ručně přepsat; ruční volba se uloží pro další návštěvu.
+Detailní technická dokumentace projektu je v [docs/README.md](docs/README.md).
+
+## Technologie
+
+- JavaScript / ES modules
+- KaTeX
+- JSZip
+- Vitest
+- ESLint / Prettier
+
+## Poznámka
+
+Projekt je plně lokální a nesendí data na server. Vše probíhá v prohlížeči uživatele.

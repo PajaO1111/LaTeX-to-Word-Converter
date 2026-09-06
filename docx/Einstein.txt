@@ -1,0 +1,82 @@
+Albert Einstein byl jedním z nejvýznamnějších fyziků 20. století. Jeho práce zásadně změnila pohled na prostor, čas, gravitaci i energii. V roce 1905 publikoval několik přelomových článků, které položily základy moderní fyziky.
+
+Níže je několik jeho známých rovnic a konceptů, které slouží jako test pro převod LaTeX → OMML.
+
+---
+
+Základní vztah mezi energií a hmotností:
+
+[
+E = mc^2
+]
+
+Rovnice speciální relativity pro časovou dilataci:
+
+
+
+\[
+t' = \frac{t}{\sqrt{1 - \frac{v^2}{c^2}}}
+\]
+
+
+
+Lorentzova transformace (test nested delimiterů):
+
+[
+x' = \gamma \left( x - vt \right)
+]
+
+Kde:
+
+
+\[
+\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
+\]
+
+
+
+---
+
+Test inline zápisu: Einsteinův vztah pro fotoelektrický jev je \( E = h\nu - W \).
+
+Test artefaktů z Wordu:
+\left{ a + b \right}
+\rightarrowL
+\begin{pmatrix}2\0\end{pmatrix}
+
+---
+
+Test matice (2×2):
+
+[
+\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}
+]
+
+Test vektoru:
+
+[
+\vec{x} = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
+]
+
+Test nested struktur:
+
+[
+\left( \left[ a + b \right]^2 + \left\{ c - d \right\} \right)
+]
+
+---
+
+Einsteinova rovnice gravitačního pole (zjednodušená forma):
+
+
+
+\[
+G_{\mu\nu} = 8\pi T_{\mu\nu}
+\]
+
+
+
+

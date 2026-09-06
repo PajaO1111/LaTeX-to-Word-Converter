@@ -10,7 +10,7 @@
     "lint": "eslint src/ tests/",
     "lint:fix": "eslint src/ tests/ --fix",
     "format": "prettier --write \"src/**/*.js\" \"tests/**/*.js\"",
-    "build": "echo 'Build step - ready for bundling'",
+    "build": "esbuild src/app/main.js --bundle --format=iife --outfile=dist/app.bundle.js",
     "dev": "node --watch src/app/app.js"
   },
   "keywords": [
@@ -24,6 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.0.0",
+    "esbuild": "^0.28.2",
     "eslint": "^9.0.0",
     "jest": "^30.5.1",
     "jsdom": "^30.0.1",

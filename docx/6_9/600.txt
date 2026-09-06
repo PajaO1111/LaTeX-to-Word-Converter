@@ -1,0 +1,6 @@
+﻿# LaTeX → Word debug log
+# version: 2026.08.25.34
+# generated: 2026-09-06T09:09:23.548Z
+{"time":"2026-09-06T09:09:08.107Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left\\lfloor x \\right\\rceil\\right\\rfloor","fallback":"\\lfloor x \\rceil\\rfloor","error":"KaTeX parse error: Expected 'EOF', got '\\right' at position 28: … x \\right\\rceil\\̲r̲i̲g̲h̲t̲\\rfloor"}
+{"time":"2026-09-06T09:09:08.107Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\left\\lceil x \\right\\rfloor\\right\\rceil","fallback":"\\lceil x \\rfloor\\rceil","error":"KaTeX parse error: Expected 'EOF', got '\\right' at position 28: …x \\right\\rfloor\\̲r̲i̲g̲h̲t̲\\rceil"}
+{"time":"2026-09-06T09:09:08.108Z","version":"2026.08.25.34","event":"katex-fallback","original":"\\begin{pmatrix}1&2\\\\3\\end{pmatrix}1&2\\\\3","fallback":"\\begin{pmatrix}1&2\\\\3\\end{pmatrix}1&2\\\\3","error":"KaTeX parse error: Expected 'EOF', got '&' at position 36: …3\\end{pmatrix}1&̲2\\\\3"}
